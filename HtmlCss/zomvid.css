@@ -1,0 +1,30 @@
+.doc{
+    background-color: #AAB4A1;
+}
+.container{
+    border-radius: 20px;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    font-size: 2rem;
+}
+
+.signe{background-color: #968F83;}
+
+
+.geste{background-color: #A1AFB9;}
+
+
+.rappel{color: red;}
+
+header{
+    background-color: #C8BEAE;
+    padding-bottom: 20px;
+}
+
+footer{
+    background-color: #485154;
+    padding-bottom: 20px;
+}
+.disclaim{
+    text-align: center;
+}

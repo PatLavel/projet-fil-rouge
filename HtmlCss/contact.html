@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header class="container-fluid"> 
+        <h1 class="text-center">
+            Header
+        </h1>
+    </header>
+    <div class="row">
+        <div class="container  col-md-5 offset-md-2">
+            <h1 class="text-center">Nous contacter:</h1>
+            <form method="POST">
+                <div class="container">
+                    <h2>Informations de contact</h2>
+                    <div class="row">
+                        <div class="col-md-2">Nom*</div>
+                        <div class="col-md-8">
+                            <input type="Nom" id="Nom">
+                        </div><br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">Prenom*</div>
+                        <div class="col-md-8">
+                            <input type="Prenom" id="Prenom">
+                        </div><br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">guilde*</div>
+                        <div class="col-md-8">
+                            <select name="Guilde" id="guilde">
+                                <option value="">-choisir votre guilde</option>
+                                <option value="forge">guilde des forgerons</option>
+                                <option value="barde">guilde des bardes</option>
+                                <option value="dev">guilde des webdev</option>
+                                <option value="magie">guilde de la magie</option>
+                                <option value="aventurier">guilde des aventuriers</option>
+                            </select>
+                        </div><br>
+                    </div>
+                    <div>(*): Information requise</div>
+                </div>
+                <div class="container">
+                    <h2>Votre message</h2>
+                    <div class="row">
+                        <div class="col-md-2">Sujet*</div>
+                        <div class="col-md-8">
+                            <input type="Sujet" id="Sujet">
+                        </div><br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">Votre message*</div>
+                        <div class="col-md-8">
+                            <textarea name="Message" id="msg" cols="30" rows="10"></textarea>
+                        </div><br>
+                    </div>
+                    <div>(*): Information requise</div>
+                    <input type="submit" value="Envoyer" href="Zomvid.html">
+                </div>
+            </form>
+        </div>
+        <div class="container col-md-4">
+            <img src="clerc.webp" alt="BRAINS" class="container-fluid">
+        </div>
+    </div>
+    <footer class="container-fluid">
+        <h1 class="text-center">
+            Footer
+        </h1>
+    </footer >
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+.container{
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+header{
+    background-color: #C8BEAE;
+    padding-bottom: 20px;
+}
+
+footer{
+    background-color: #485154;
+    padding-bottom: 20px;
+}
+
+body{
+    background-color: #A1AFB9;}
