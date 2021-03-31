@@ -1,0 +1,522 @@
+/*-----Pour plusieurs Pages-----*/
+body {
+    font-family: Roboto;
+    margin: 0;
+}
+header {
+    background-color: rgb(200, 190, 174);
+    position: relative;
+    width: 100%;
+    height: 103px;
+    top: -23px;
+    left: 0px
+}
+.nemelade {
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: 1px black; 
+}
+.title_forum {
+    background-color: rgb(161, 175, 185);
+    width: 1028px;
+    height: 83px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 45px;
+    color: white;
+}
+/*-----Page Forum-----*/
+.forum_titre {
+    position: relative;
+    left: 40px;
+    top: 0.3rem;
+}
+table {
+    width: 1032px;
+    background-color: rgb(170, 180, 161);
+    color: white;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+tr {
+    border: 2px solid white;
+    height: 69px;
+}
+.colonne_sujet {
+    width: 11rem;
+}
+a {
+    color: white;
+}
+a:hover {
+    color: black;
+}
+.nom_sujet {
+    color: white;
+    position: relative;
+    left: 20px;
+}
+.nom_crea_date {
+    position: relative;
+    left: 20px;
+    font-size: 12px;
+}
+.forum_reponses {
+    width: 4rem;
+}
+.forum_vues {
+    width: 3.5rem;
+}
+.forum_notes {
+    width: 4rem;
+}
+.forum_activite {
+    width: 4.5rem;
+}
+.nom_colonnes {
+    background-color: rgb(161, 175, 185);
+    width: 1028px;
+    height: 69px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+.sujet {
+    position: relative;
+    top: 0.9rem;
+    left: 6rem;
+}
+.reponses {
+    position: relative;
+    top: 0.9rem;
+    left: 18rem;
+}
+.vues {
+    position: relative;
+    top: 0.9rem;
+    left: 21rem;
+}
+.notes {
+    position: relative;
+    top: 0.9rem;
+    left: 25rem;
+}
+.activite {
+    position: relative;
+    top: 0.9rem;
+    left: 31rem;
+}
+.filtres {
+    display: block;
+    background-color: rgb(161, 175, 185);
+    width: 1028px;
+    height: 69px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.forum_recherche {
+    width: 200px;
+    height: 28px;
+    position: relative;
+    border: transparent;
+    border-radius: 20px;
+    left: 20px;
+    top: 19px;
+    font-family: Roboto;
+    font-size: 18px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.forum_creer_sujet {
+    display: inline;
+    width: 150px;
+    height: 30px;
+    position: relative;
+    border: transparent;
+    border-radius: 20px;
+    top: 19px;
+    font-family: Roboto;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.a_forum_creer_suj:hover {
+    text-decoration: underline;
+}
+.forum_trie {
+    width: 11.5rem;
+    height: 30px;
+    position: relative;
+    border: transparent;
+    border-radius: 20px;
+    top: 19px;
+    font-family: Roboto;
+    font-size: 18px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-left: 40px;
+}
+.forum_trie:hover {
+    text-decoration: underline;
+}
+img {
+    width: 70px;
+}
+img:hover {
+    width: 72px;
+}
+.bouton {
+    position: sticky;
+    width: 155px;
+    left: 87%;
+    top: 0px;
+}
+/*-----Page Creation sujet-----*/
+.article_formulaire_sujet {
+    background-color: rgb(170, 180, 161);
+    width: 1028px;
+    height: 600px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.div_formulaire_sujet {
+    width: 928px;
+    height: 500px;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    left: 50px;
+    top: 20px;
+}
+textarea {
+    position: relative;
+    top: 7px;
+}
+.saisie_titre_sujet {
+    width: 920px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: Roboto;
+    font-size: 15px;
+    border: transparent;
+    border-radius: 10px;
+}
+.saisie_contenu_sujet {
+    width: 920px;
+    height: 370px;
+    position: relative;
+    top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: Roboto;
+    font-size: 15px;
+    border: transparent;
+    border-radius: 10px;
+    resize: none;
+}
+.poster {
+    background-color: rgb(161, 175, 185);
+    border-radius: 50px;
+    border : 1px solid white;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    left: 823px;
+    top: 20px;
+}
+.poster:hover {
+    color: black;
+    border-color: black;
+}
+/*-----Page Sujet-----*/
+.sujet_titre {
+    padding: 0;
+    width: 1028px;
+}
+.sujet_nom_sujet {
+    background-color: rgb(161, 175, 185);
+    width: 48vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 0px;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 2vh;
+    padding-bottom: 0.5vh;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: white;
+    position: relative;
+    left: 22.5vw;
+}
+.sujet_nomCreateur {
+    background-color: rgb(161, 175, 185);
+    width: 48vw;
+    margin: 0;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 2vh;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+    left: 22.5vw;
+}
+.sujet_contenu {
+    background-color: rgb(170, 180, 161);
+    width: 54vw;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+    left: 22.5vw;
+}
+.sujet_contenu_texte, .sujet_contenu_footer {
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+.sujet_ligne_separation {
+    border-width: 2px;
+}
+.sujet_jaime {
+    margin-left: 1rem;
+}
+.sujet_jaimepas {
+    margin-left: 0.7rem;
+}
+.bouton_repondre {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.bouton_repondre:hover {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.bouton_jaime {
+    position: relative;
+    top: 0.3vh;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.bouton_jaime:hover {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.bouton_jaimepas {
+    position: relative;
+    top: 0.5vh;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.bouton_jaimepas:hover {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.sujet_nb_rep_tri {
+    position: relative;
+    left: 22.5vw;
+    background-color: rgb(161, 175, 185);
+    width: 48vw;
+    font-size: 1.5rem;
+    color: white;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 4vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.sujet_tri {
+    font-size: 1rem;
+    border: unset;
+    border-radius: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    position: relative;
+}
+.sujet_tri:hover {
+    text-decoration: underline;
+}
+.sujet_reponses {
+    margin-left: 25px;
+}
+.sujet_nb_rep {
+    background-color: white;
+    color: black;
+    border-radius: 23px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: relative;
+    left: 2vw;
+}
+.sujet_rep_contenu {
+    background-color: rgb(170, 180, 161);
+    width: 54vw;
+    margin: 0;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+    left: 22.5vw;
+}
+.sujet_rep_rep_texte {
+    margin-left: 7vw;
+    margin-right: 3vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom-left-radius: 10px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.sujet_contenu_footer2 {
+    margin-left: 38vw;
+}
+.suj_rep_nom_date_heure {
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+.suj_rep_rep_nom_date_heure {
+    margin-left: 7vw;
+    margin-right: 3vw;
+    margin-bottom: 0;
+    border-left: 2px solid white;
+    padding-left: 20px;
+    line-height: 50px;
+}
+.suj_rep_nomcrea {
+    font-weight: bold;
+}
+.suj_rep_heure {
+    font-style: italic;
+}
+.nav_pagination {
+    background-color: rgb(170, 180, 161);
+    width: 54vw;
+    margin: 0;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+    left: 22.5vw;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.pagination {
+    background-color: rgb(161, 175, 185);
+    width: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+a {
+    font-size: 20px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.pag_select_option {
+    background-color: rgb(161, 175, 185);
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.pag_select_option:hover {
+    color: black;
+    border: 1px solid black;
+}
+a {
+    text-decoration: none;
+}
+/*-----footer-----*/
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #485154;
+    margin: 0;
+    padding: 10px;
+  
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+    margin-top: 30px;
+  }
+  .left {
+    margin: none;
+  }
+  .middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    margin-right: 200px;
+  }
+  
+  .footer_link {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .right {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .logo_social {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo_footer {
+    width: 50%;
+    height: auto;
+  }
+  
