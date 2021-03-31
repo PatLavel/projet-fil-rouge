@@ -1,0 +1,19 @@
+.logo_footer{
+    height: 50px;
+}
+
+Header{
+    background: #C8BEAE;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.HeadText{
+    font-size: 25px;
+}
+
+.userright{
+    padding-left: 0%;
+}
+.userleft{
+    padding-right: 0%;
+}
