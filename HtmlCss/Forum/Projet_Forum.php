@@ -11,9 +11,23 @@
 
 <body>
     <header>
-        <h1 class="nemelade">NEMELADE</h1>
+        <div class="header">
+            <div class="h_left">
+                <a href="accueil.html"><img class="logo_nemelade" title="logo_blanc" src="logo_blanc.png" alt="logo_nemelade" /></a>
+            </div>
+            <div class="h_middle">
+                <a href="Projet_Forum.php" class="HeadText1">Forum</a>
+                <a href="Zomvid.html" class="HeadText2">Actualités</a>
+                <a href="Arene.html" class="HeadText3">Arène</a>
+            </div>
+            <div class="h_right1">
+                <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="user_pic.png" alt="logo_nemelade" /></a>
+            </div>
+            <div class="h_right2"><a href="Connexion.html" class="lien_co">Connexion</a><br><a href="creation_compte.html" class="lien_insc">Inscription</a>
+            </div>
+        </div>
     </header>
-    
+
     <section>
         <div class="title_forum">
             <h3 class="forum_titre">Forum</h3>
@@ -41,7 +55,7 @@
             $a = 0;
             while ($a < 15) {
                 echo '<tr>';
-                echo '<td class="colonne_sujet"><span class="nom_sujet"><a href="Projet_Sujet.php">Sujet ceci est le nom du sujet</a></span><br><span class="nom_crea_date">Par nomCreateur le 15 Mars 2021</span></td>';
+                echo '<td class="colonne_sujet"><span class="nom_sujet"><a class="lien_sujet" href="Projet_Sujet.php">Sujet ceci est le nom du sujet</a></span><br><span class="nom_crea_date">Par nomCreateur le 15 Mars 2021</span></td>';
                 echo '<td class="forum_reponses">482</td>';
                 echo '<td class="forum_vues">1506</td>';
                 echo '<td class="forum_notes">+48</td>';
@@ -53,7 +67,7 @@
         </table>
 
         <div class="bouton">
-            <a href="Projet_Forum.php"><img src="Button.jpg" alt="Vers le haut"></a>
+            <a href="Projet_Forum.php"><img class="bouton_img" src="Button.jpg" alt="Vers le haut"></a>
         </div>
     </section>
 
@@ -68,7 +82,8 @@
                     <span class="footer_link">-</span>
                     <span class="footer_link">Mentions légales</span>
                     <span class="footer_link">-</span>
-                    <span class="footer_link">Contact</span>
+                    <a class="footer_contact" href="contact.html">Contact</a>
+
                 </div>
                 <div>
                     <p>Copyright ©2021 Nemelade Inc. Tous droits réservés.</p>

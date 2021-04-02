@@ -6,12 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Projet_Forum.css">
-    <title>Document</title>
+    <title>Sujet</title>
 </head>
 
 <body>
     <header>
-        <h1 class="nemelade">NEMELADE</h1>
+        <div class="header">
+            <a href="accueil.html"><img class="logo_nemelade" title="logo_blanc" src="logo_blanc.png" alt="logo_nemelade" /></a>
+            <a href="Projet_Forum.php" class="HeadText1">Forum</a>
+            <a href="Zomvid.html" class="HeadText2">Actualités</a>
+            <a href="Arene.html" class="HeadText3">Arène</a>
+            <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="user_pic.png" alt="logo_nemelade" /></a>
+            <a href="Connexion.html" class="lien_co">Connexion</a><br><a href="creation_compte.html" class="lien_insc">Inscription</a>
+        </div>
     </header>
 
     <section>
@@ -152,7 +159,7 @@
         </nav>
 
         <div class="bouton">
-            <a href="Projet_Forum.php"><img src="Button.jpg" alt="Vers le haut"></a>
+            <a href="Projet_Sujet.php"><img class="bouton_img" src="Button.jpg" alt="Vers le haut"></a>
         </div>
     </section>
 

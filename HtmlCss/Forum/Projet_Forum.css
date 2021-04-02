@@ -1,25 +1,97 @@
+/*-----header-----*/
+.header{
+    display: flex;
+    justify-content: space-around;
+    background-color: #C8BEAE;
+    margin: 0;
+    padding: 10px;
+  
+    position: relative;
+    top: 0;
+    width: 100%;
+
+    margin-bottom: 30px;
+}
+.h_left {
+    display: flex;
+    margin-top: 15px;
+}
+.logo_nemelade {
+    width: 18rem;
+}
+.logo_nemelade:hover {
+    transform: rotateX(180deg);
+}
+.h_middle {
+    display: flex;
+    margin-top: 35px;
+}
+.HeadText1 {
+    font-size: 25px;
+    color: white;
+}
+.HeadText1:hover {
+    text-decoration: underline;
+}
+.HeadText2 { 
+    font-size: 25px;
+    color: white;
+    margin-left: 30px;
+}
+.HeadText2:hover {
+    text-decoration-line: overline;
+}
+.HeadText3 {
+    font-size: 25px;
+    color: white;
+    margin-left: 30px;
+}
+.HeadText3:hover {
+    text-decoration: underline;
+}
+.h_right1 {
+    display: flex;
+    margin-top: 10px;
+    position: relative;
+    left: 180px;
+}
+.logo_user {
+    border: 2px solid #C8BEAE;
+    width: 4rem;
+    border-radius: 50%;
+}
+.logo_user:hover {
+    border: 2px solid black;
+}
+.h_right2 {
+    display: flex;
+    margin-top: 32px;
+}
+.lien_co {
+    color: white;
+    font-size: 20px;
+}
+.lien_co:hover {
+    font-size: 22px;
+}
+.lien_insc {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.lien_insc:hover {
+    font-size: 22px;
+}
 /*-----Pour plusieurs Pages-----*/
 body {
     font-family: Roboto;
     margin: 0;
 }
-header {
-    background-color: rgb(200, 190, 174);
-    position: relative;
-    width: 100%;
-    height: 103px;
-    top: -23px;
-    left: 0px
-}
-.nemelade {
-    font-weight: bold;
-    color: white;
-    -webkit-text-stroke: 1px black; 
-}
 .title_forum {
     background-color: rgb(161, 175, 185);
     width: 1028px;
     height: 83px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.26);
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -55,10 +127,10 @@ tr {
 .colonne_sujet {
     width: 11rem;
 }
-a {
+.lien_sujet {
     color: white;
 }
-a:hover {
+.lien_sujet:hover {
     color: black;
 }
 .nom_sujet {
@@ -87,6 +159,7 @@ a:hover {
     background-color: rgb(161, 175, 185);
     width: 1028px;
     height: 69px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.26);
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -179,10 +252,10 @@ a:hover {
 .forum_trie:hover {
     text-decoration: underline;
 }
-img {
+.bouton_img {
     width: 70px;
 }
-img:hover {
+.bouton_img:hover {
     width: 72px;
 }
 .bouton {
@@ -199,6 +272,7 @@ img:hover {
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.26);
 }
 .div_formulaire_sujet {
     width: 928px;
@@ -261,6 +335,7 @@ textarea {
 .sujet_titre {
     padding: 0;
     width: 1028px;
+    margin-top: 60px;
 }
 .sujet_nom_sujet {
     background-color: rgb(161, 175, 185);
@@ -519,4 +594,12 @@ a {
     width: 50%;
     height: auto;
   }
-  
+  .footer_contact {
+      color: white;
+      font-size: 12px;
+  }
+  .footer_contact:hover {
+    color: white;
+    font-size: 12px;
+    text-decoration: underline;
+}
