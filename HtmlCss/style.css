@@ -1,0 +1,187 @@
+.all_content {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.profile {
+  margin-bottom: 60px;
+  margin-left: 50px;
+}
+
+.connection {
+  margin-left: 50px;
+  margin-right: 20px;
+  width: 400px;
+}
+
+.password_lost {
+  margin-left: 80px;
+}
+
+.case {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.separation {
+  border-right: 2px solid #8f8f8f;
+  width: 10px;
+}
+
+.bloc_join {
+  width: 800px;
+  margin-left: 80px;
+}
+
+.join_us {
+  font-size: 1.3em;
+  color: #8f8f8f;
+}
+
+.button {
+  width: 300px;
+  height: 40px;
+  border: none;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: bold;
+  background-color: #aab4a1;
+  font-size: 1.3em;
+}
+
+.button2 {
+  border: none;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: white;
+  font-weight: bold;
+  background-color: #aab4a1;
+  font-size: 1em;
+}
+
+.myh3 {
+  color: #8f8f8f;
+  margin-bottom: 20px;
+}
+
+.myp {
+  color: #8f8f8f;
+}
+.myh1 {
+  font-size: 1.7em;
+  margin-bottom: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 50px;
+  color: #8f8f8f;
+}
+
+.myh2 {
+  font-size: 1.3em;
+  margin-bottom: 70px;
+  margin-left: 40px;
+  margin-right: 40px;
+  color: #8f8f8f;
+}
+
+.check {
+  color: #8f8f8f;
+}
+
+.picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+.profile_pic {
+  width: 100px;
+  height: 100px;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+.subscription {
+  display: flex;
+  justify-content: center;
+}
+
+.validation {
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  margin-top: 10px;
+}
+
+.bottom {
+  display: flex;
+  width: 1000;
+  justify-content: flex-start;
+  border-top: 2px solid black;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.case {
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+/* Css lié au footer */
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #485154;
+  margin: 10px;
+  padding: 10px;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+}
+.left {
+  margin: none;
+}
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  margin-right: 200px;
+}
+
+.footer_link {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.right {
+  display: flex;
+  margin-top: 10px;
+}
+
+.logo_social {
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.logo_footer {
+  width: 50%;
+  height: auto;
+}
