@@ -269,3 +269,21 @@
 .lien_insc:hover {
   font-size: 22px;
 }
+
+/* page arene */
+.arena_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.arena {
+  display: flex;
+  justify-content: center;
+  width: 75rem;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.versus {
+  margin-top: 80px;
+}
