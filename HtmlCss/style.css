@@ -287,3 +287,36 @@
 .versus {
   margin-top: 80px;
 }
+
+  /* page explication concept */
+
+  .concept{
+    position :absolute; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+
+  .h2concept {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    color: #8f8f8f;
+  }
+
+    #global {
+    margin-top:150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px; 
+  }
+
+  .CTAconcept{
+margin-left: 250px;
+  width: 700px;
+  }
+
+  .city {
+    display: flex;
+    width: 700px;
+    height: auto;
+    margin-bottom: 20px;
+  }
