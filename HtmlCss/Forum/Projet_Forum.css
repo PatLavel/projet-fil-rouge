@@ -1,272 +1,123 @@
-/*-----header-----*/
-.header{
-    display: flex;
-    justify-content: space-around;
-    background-color: #C8BEAE;
-    margin: 0;
-    padding: 10px;
-  
-    position: relative;
-    top: 0;
-    width: 100%;
+/*-----Pour plusieurs Pages-----*/
 
-    margin-bottom: 30px;
+html {
+    scroll-behavior: smooth;
 }
-.h_left {
+
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+.bar_title_forum {
     display: flex;
+    background-color: #485154;
+    height: 5rem;
+}
+
+.petit_logo {
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.title_forum {
+    font-weight: bold;
+    color: white;
     margin-top: 15px;
 }
-.logo_nemelade {
-    width: 18rem;
+
+
+/*-----Page Forum-----*/
+
+.block_forum {
+    background-color: rgb(236, 236, 236);
+    padding: 10px;
+    padding-bottom: 1px;
+    width: 75rem;
+    margin-left: auto;
+    margin-right: 0;
 }
-.logo_nemelade:hover {
-    transform: rotateX(180deg);
-}
-.h_middle {
+
+.bar_nav {
+    background-color: #C8BEAE;
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
-    margin-top: 35px;
+    align-items: center;
 }
-.HeadText1 {
-    font-size: 25px;
-    color: white;
-}
-.HeadText1:hover {
-    text-decoration: underline;
-}
-.HeadText2 { 
-    font-size: 25px;
-    color: white;
-    margin-left: 30px;
-}
-.HeadText2:hover {
-    text-decoration-line: overline;
-}
-.HeadText3 {
-    font-size: 25px;
-    color: white;
-    margin-left: 30px;
-}
-.HeadText3:hover {
-    text-decoration: underline;
-}
-.h_right1 {
-    display: flex;
-    margin-top: 10px;
-    position: relative;
-    left: 180px;
-}
-.logo_user {
-    border: 2px solid #C8BEAE;
-    width: 4rem;
-    border-radius: 50%;
-}
-.logo_user:hover {
-    border: 2px solid black;
-}
-.h_right2 {
-    display: flex;
-    margin-top: 32px;
-}
-.lien_co {
-    color: white;
-    font-size: 20px;
-}
-.lien_co:hover {
-    font-size: 22px;
-}
-.lien_insc {
-    color: white;
-    font-size: 20px;
+
+.tri {
+    display: inline-block;
+    width: 160px;
+    height: 39px;
     margin-left: 10px;
 }
-.lien_insc:hover {
-    font-size: 22px;
+
+.button_creer_suj {
+    display: inline-block;
+    width: 200px;
+    margin-left: 15px;
 }
-/*-----Pour plusieurs Pages-----*/
-body {
-    font-family: Roboto;
-    margin: 0;
-}
-.title_forum {
-    background-color: rgb(161, 175, 185);
-    width: 1028px;
-    height: 83px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.26);
-    border-radius: 10px;
+
+.search {
+    display: inline-block;
+    width: 20rem;
     margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    font-weight: bold;
-    font-size: 45px;
-    color: white;
+    margin-right: 10px;
 }
-/*-----Page Forum-----*/
-.forum_titre {
-    position: relative;
-    left: 40px;
-    top: 0.3rem;
+
+.button_search {
+    border-radius: 50rem;
 }
-table {
-    width: 1032px;
-    background-color: rgb(170, 180, 161);
-    color: white;
-    font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+
+.table_head {
+    --bs-table-bg: #C8BEAE;
 }
-tr {
-    border: 2px solid white;
-    height: 69px;
+
+.table_sujet {
+    text-align: center;
 }
+
 .colonne_sujet {
-    width: 11rem;
+    text-align: left;
 }
+
 .lien_sujet {
-    color: white;
+    color: black;
+    text-decoration: none;
 }
+
 .lien_sujet:hover {
     color: black;
+    position: absolute;
+    font-size: 1.23rem;
+    text-decoration: underline;
 }
-.nom_sujet {
-    color: white;
-    position: relative;
-    left: 20px;
-}
+
 .nom_crea_date {
-    position: relative;
-    left: 20px;
-    font-size: 12px;
+    font-size: 13px;
+    font-style: italic;
 }
-.forum_reponses {
-    width: 4rem;
-}
-.forum_vues {
-    width: 3.5rem;
-}
-.forum_notes {
-    width: 4rem;
-}
-.forum_activite {
-    width: 4.5rem;
-}
-.nom_colonnes {
-    background-color: rgb(161, 175, 185);
-    width: 1028px;
-    height: 69px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.26);
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 30px;
-    color: white;
-}
-.sujet {
-    position: relative;
-    top: 0.9rem;
-    left: 6rem;
-}
-.reponses {
-    position: relative;
-    top: 0.9rem;
-    left: 18rem;
-}
-.vues {
-    position: relative;
-    top: 0.9rem;
-    left: 21rem;
-}
-.notes {
-    position: relative;
-    top: 0.9rem;
-    left: 25rem;
-}
-.activite {
-    position: relative;
-    top: 0.9rem;
-    left: 31rem;
-}
-.filtres {
-    display: block;
-    background-color: rgb(161, 175, 185);
-    width: 1028px;
-    height: 69px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.forum_recherche {
-    width: 200px;
-    height: 28px;
-    position: relative;
-    border: transparent;
-    border-radius: 20px;
-    left: 20px;
-    top: 19px;
-    font-family: Roboto;
-    font-size: 18px;
-    padding-left: 6px;
-    padding-right: 6px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-}
-.forum_creer_sujet {
-    display: inline;
-    width: 150px;
-    height: 30px;
-    position: relative;
-    border: transparent;
-    border-radius: 20px;
-    top: 19px;
-    font-family: Roboto;
-    font-size: 18px;
-    margin-left: 20px;
-}
-.a_forum_creer_suj:hover {
-    text-decoration: underline;
-}
-.forum_trie {
-    width: 11.5rem;
-    height: 30px;
-    position: relative;
-    border: transparent;
-    border-radius: 20px;
-    top: 19px;
-    font-family: Roboto;
-    font-size: 18px;
-    padding-left: 6px;
-    padding-right: 6px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    margin-left: 40px;
-}
-.forum_trie:hover {
-    text-decoration: underline;
-}
-.bouton_img {
-    width: 70px;
-}
-.bouton_img:hover {
-    width: 72px;
-}
-.bouton {
+
+.block_button_top {
+    position: -webkit-sticky;
     position: sticky;
-    width: 155px;
-    left: 87%;
-    top: 0px;
+    top: 90%;
+    text-align: center;
 }
+
+.button_top:hover {
+    fill: #C8BEAE;
+}
+
+
 /*-----Page Creation sujet-----*/
+
 .article_formulaire_sujet {
-    background-color: rgb(170, 180, 161);
+    background-color: rgb(141, 156, 126);
     width: 1028px;
     height: 600px;
     border-radius: 10px;
@@ -274,6 +125,7 @@ tr {
     margin-right: auto;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.26);
 }
+
 .div_formulaire_sujet {
     width: 928px;
     height: 500px;
@@ -283,10 +135,12 @@ tr {
     left: 50px;
     top: 20px;
 }
+
 textarea {
     position: relative;
     top: 7px;
 }
+
 .saisie_titre_sujet {
     width: 920px;
     height: 20px;
@@ -296,11 +150,12 @@ textarea {
     padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: Roboto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     border: transparent;
     border-radius: 10px;
 }
+
 .saisie_contenu_sujet {
     width: 920px;
     height: 370px;
@@ -310,16 +165,17 @@ textarea {
     padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: Roboto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     border: transparent;
     border-radius: 10px;
     resize: none;
 }
+
 .poster {
     background-color: rgb(161, 175, 185);
     border-radius: 50px;
-    border : 1px solid white;
+    border: 1px solid white;
     padding: 10px;
     font-size: 20px;
     color: white;
@@ -327,16 +183,21 @@ textarea {
     left: 823px;
     top: 20px;
 }
+
 .poster:hover {
     color: black;
     border-color: black;
 }
+
+
 /*-----Page Sujet-----*/
+
 .sujet_titre {
     padding: 0;
     width: 1028px;
     margin-top: 60px;
 }
+
 .sujet_nom_sujet {
     background-color: rgb(161, 175, 185);
     width: 48vw;
@@ -353,6 +214,7 @@ textarea {
     position: relative;
     left: 22.5vw;
 }
+
 .sujet_nomCreateur {
     background-color: rgb(161, 175, 185);
     width: 48vw;
@@ -367,8 +229,9 @@ textarea {
     position: relative;
     left: 22.5vw;
 }
+
 .sujet_contenu {
-    background-color: rgb(170, 180, 161);
+    background-color: rgb(141, 156, 126);
     width: 54vw;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -380,47 +243,59 @@ textarea {
     position: relative;
     left: 22.5vw;
 }
-.sujet_contenu_texte, .sujet_contenu_footer {
+
+.sujet_contenu_texte,
+.sujet_contenu_footer {
     margin-left: 3vw;
     margin-right: 3vw;
 }
+
 .sujet_ligne_separation {
     border-width: 2px;
 }
+
 .sujet_jaime {
     margin-left: 1rem;
 }
+
 .sujet_jaimepas {
     margin-left: 0.7rem;
 }
+
 .bouton_repondre {
     width: 1.2rem;
     height: 1.2rem;
 }
+
 .bouton_repondre:hover {
     width: 1.3rem;
     height: 1.3rem;
 }
+
 .bouton_jaime {
     position: relative;
     top: 0.3vh;
     width: 1.2rem;
     height: 1.2rem;
 }
+
 .bouton_jaime:hover {
     width: 1.3rem;
     height: 1.3rem;
 }
+
 .bouton_jaimepas {
     position: relative;
     top: 0.5vh;
     width: 1.2rem;
     height: 1.2rem;
 }
+
 .bouton_jaimepas:hover {
     width: 1.3rem;
     height: 1.3rem;
 }
+
 .sujet_nb_rep_tri {
     position: relative;
     left: 22.5vw;
@@ -436,6 +311,7 @@ textarea {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
 .sujet_tri {
     font-size: 1rem;
     border: unset;
@@ -446,12 +322,15 @@ textarea {
     padding-bottom: 1px;
     position: relative;
 }
+
 .sujet_tri:hover {
     text-decoration: underline;
 }
+
 .sujet_reponses {
     margin-left: 25px;
 }
+
 .sujet_nb_rep {
     background-color: white;
     color: black;
@@ -463,8 +342,9 @@ textarea {
     position: relative;
     left: 2vw;
 }
+
 .sujet_rep_contenu {
-    background-color: rgb(170, 180, 161);
+    background-color: rgb(141, 156, 126);
     width: 54vw;
     margin: 0;
     padding-top: 1vh;
@@ -474,6 +354,7 @@ textarea {
     position: relative;
     left: 22.5vw;
 }
+
 .sujet_rep_rep_texte {
     margin-left: 7vw;
     margin-right: 3vw;
@@ -485,13 +366,16 @@ textarea {
     padding-left: 20px;
     padding-bottom: 20px;
 }
+
 .sujet_contenu_footer2 {
     margin-left: 38vw;
 }
+
 .suj_rep_nom_date_heure {
     margin-left: 3vw;
     margin-right: 3vw;
 }
+
 .suj_rep_rep_nom_date_heure {
     margin-left: 7vw;
     margin-right: 3vw;
@@ -500,14 +384,17 @@ textarea {
     padding-left: 20px;
     line-height: 50px;
 }
+
 .suj_rep_nomcrea {
     font-weight: bold;
 }
+
 .suj_rep_heure {
     font-style: italic;
 }
+
 .nav_pagination {
-    background-color: rgb(170, 180, 161);
+    background-color: rgb(141, 156, 126);
     width: 54vw;
     margin: 0;
     padding-top: 1vh;
@@ -519,6 +406,7 @@ textarea {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
 .pagination {
     background-color: rgb(161, 175, 185);
     width: 10rem;
@@ -529,42 +417,131 @@ textarea {
     padding-left: 10px;
     padding-bottom: 5px;
 }
+
 a {
     font-size: 20px;
     padding-left: 6px;
     padding-right: 6px;
 }
+
 .pag_select_option {
     background-color: rgb(161, 175, 185);
     color: white;
     border: 1px solid white;
     border-radius: 10px;
 }
+
 .pag_select_option:hover {
     color: black;
     border: 1px solid black;
 }
+
 a {
     text-decoration: none;
 }
+
+
+/*-----header-----*/
+
+.header {
+    display: flex;
+    background-color: #C8BEAE;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 50px;
+    justify-content: space-around;
+}
+
+.h_left {
+    display: flex;
+    align-items: center;
+}
+
+.logo_nemelade {
+    width: 18rem;
+}
+
+.h_middle {
+    display: flex;
+    align-items: center;
+}
+
+.HeadText {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 30px;
+}
+
+.HeadText:hover {
+    color: #485154;
+}
+
+.h_right1 {
+    display: flex;
+    align-items: center;
+}
+
+.logo_user {
+    border: 2px solid #C8BEAE;
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.logo_user:hover {
+    border: 2px solid #485154;
+}
+
+.h_right2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.lien_co {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.lien_co:hover {
+    color: #485154;
+}
+
+.lien_insc {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.lien_insc:hover {
+    color: #485154;
+}
+
+
 /*-----footer-----*/
+
 .footer {
     display: flex;
     justify-content: space-around;
     background-color: #485154;
     margin: 0;
     padding: 10px;
-  
     position: relative;
     bottom: 0;
     width: 100%;
-
     margin-top: 30px;
-  }
-  .left {
+}
+
+.left {
     margin: none;
-  }
-  .middle {
+}
+
+.middle {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -572,33 +549,35 @@ a {
     color: white;
     font-size: 12px;
     margin-right: 200px;
-  }
-  
-  .footer_link {
+}
+
+.footer_link {
     margin-left: 5px;
     margin-right: 5px;
-  }
-  
-  .right {
+}
+
+.right {
     display: flex;
     margin-top: 10px;
-  }
-  
-  .logo_social {
+}
+
+.logo_social {
     margin-right: 20px;
     width: 40px;
     height: 40px;
-  }
-  
-  .logo_footer {
+}
+
+.logo_footer {
     width: 50%;
     height: auto;
-  }
-  .footer_contact {
-      color: white;
-      font-size: 12px;
-  }
-  .footer_contact:hover {
+}
+
+.footer_contact {
+    color: white;
+    font-size: 12px;
+}
+
+.footer_contact:hover {
     color: white;
     font-size: 12px;
     text-decoration: underline;

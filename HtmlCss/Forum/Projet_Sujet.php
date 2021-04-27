@@ -13,17 +13,18 @@
     <header>
         <div class="header">
             <div class="h_left">
-                <a href="accueil.html"><img class="logo_nemelade" title="logo_blanc" src="logo_blanc.png" alt="logo_nemelade" /></a>
+                <a href="accueil.html"><img class="logo_nemelade" src="../logo_blanc.png" alt="logo_nemelade" /></a>
             </div>
             <div class="h_middle">
-                <a href="Projet_Forum.php" class="HeadText1">Forum</a>
-                <a href="Zomvid.html" class="HeadText2">Actualités</a>
-                <a href="Arene.html" class="HeadText3">Arène</a>
+                <a href="accueil.html" class="HeadText">Accueil</a>
+                <a href="Projet_Forum.php" class="HeadText">Forum</a>
+                <a href="Zomvid.html" class="HeadText">Actualités</a>
+                <a href="Arene.html" class="HeadText">Arène</a>
             </div>
             <div class="h_right1">
-                <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="user_pic.png" alt="logo_nemelade" /></a>
-            </div>
-            <div class="h_right2"><a href="Connexion.html" class="lien_co">Connexion</a><br><a href="creation_compte.html" class="lien_insc">Inscription</a>
+                <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="../user_pic.png" alt="logo_nemelade" /></a>
+                <div class="h_right2"><a href="Connexion.html" class="lien_co">Connexion</a><a href="creation_compte.html" class="lien_insc">Inscription</a>
+                </div>
             </div>
         </div>
     </header>
@@ -173,7 +174,7 @@
     <footer>
         <div class="footer">
             <div class="left">
-                <img class="logo_footer" title="logo_blanc" src="logo_blanc.PNG" alt="logo_nemelade" />
+                <img class="logo_footer" title="logo_blanc" src="../logo_blanc.PNG" alt="logo_nemelade" />
             </div>
             <div class="middle">
                 <div>
@@ -189,10 +190,10 @@
                 </div>
             </div>
             <div class="right">
-                <img class="logo_social" title="logo_twitter" src="logo_twitter.PNG" alt="logo_twitter" />
-                <img class="logo_social" title="logo_facebook" src="logo_facebook.PNG" alt="logo_facebook" />
-                <img class="logo_social" title="logo_discord" src="logo_discord.PNG" alt="logo_discord" />
-                <img class="logo_social" title="logo_whatsapp" src="logo_whatsapp.PNG" alt="logo_whatsapp" />
+                <img class="logo_social" title="logo_twitter" src="../logo_twitter.PNG" alt="logo_twitter" />
+                <img class="logo_social" title="logo_facebook" src="../logo_facebook.PNG" alt="logo_facebook" />
+                <img class="logo_social" title="logo_discord" src="../logo_discord.PNG" alt="logo_discord" />
+                <img class="logo_social" title="logo_whatsapp" src="../logo_whatsapp.PNG" alt="logo_whatsapp" />
             </div>
         </div>
     </footer>
