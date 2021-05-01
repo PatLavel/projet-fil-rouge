@@ -1,8 +1,28 @@
-
+.myp {
+    color: #8f8f8f;
+  }
+.map {
+    color: #8f8f8f;
+    font-weight: bold;
+  }
+.mop{
+    width: 300px;
+    height: 40px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: #aab4a1;
+    font-size: 1.3em;
+}
 .container{
     padding-bottom: 2%;
     padding-top: 2%;
 }
+.row{
+    padding-bottom: 10px;
+}
+
 header{
     background-color: #C8BEAE;
     padding-bottom: 20px;
@@ -14,7 +34,7 @@ footer{
 }
 
 body{
-    background-color: #A1AFB9;
+    background-color: #ffffff;
 }
 /*-----header-----*/
 .header{
