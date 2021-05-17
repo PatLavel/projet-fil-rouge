@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="Header.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="h_left">
+                <a href="accueil.html"><img class="logo_nemelade" title="logo_blanc" src="logo_blanc.png" alt="logo_nemelade" /></a>
+            </div>
+            <div class="h_middle">
+                <a href="Projet_Forum.php" class="HeadText1">Forum</a>
+                <a href="Zomvid.html" class="HeadText2">Actualités</a>
+                <a href="Arene.html" class="HeadText3">Arène</a>
+            </div>
+            <div class="h_right1">
+                <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="user_pic.png" alt="logo_nemelade" /></a>
+            </div>
+            <div class="h_right2"><a href="Connexion.html" class="lien_co">Connexion</a><br><a href="creation_compte.html" class="lien_insc">Inscription</a>
+            </div>
+        </div>
+    </header>
+    <div class="row">
+        <div class="container  col-md-6 offset-md-2">
+            <h2 class="text-center map">Nous contacter:</h2>
+            <form method="POST">
+                <div class="container">
+                    <h3 class="map">Informations de contact</h3>
+                    <div class="row">
+                        <div class="col-md-2  myp">Nom*</div>
+                        <div class="col-md-8 myp">
+                            <input type="Nom" id="Nom">
+                        </div><br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 myp">Prenom*</div>
+                        <div class="col-md-8 myp">
+                            <input type="Prenom" id="Prenom">
+                        </div><br>  
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 myp">guilde*</div>
+                        <div class="col-md-8 myp">
+                            <select class="myp" name="Guilde" id="guilde">
+                                <option value="">-choisir votre guilde</option>
+                                <option value="forge">guilde des forgerons</option>
+                                <option value="barde">guilde des bardes</option>
+                                <option value="dev">guilde des webdev</option>
+                                <option value="magie">guilde de la magie</option>
+                                <option value="aventurier">guilde des aventuriers</option>
+                            </select>
+                        </div><br>
+                    </div>
+                    <div class="myp">(*): Information requise</div>
+                </div>
+                <div class="container">
+                    <h3 class="map">Votre message</h3>
+                    <div class="row">
+                        <div class="col-md-2 myp">Sujet*</div>
+                        <div class="col-md-8 myp">
+                            <input type="Sujet" id="Sujet">
+                        </div><br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 myp">Votre message*</div>
+                        <div class="col-md-8 myp">
+                            <textarea name="Message" id="msg" cols="40" rows="10"></textarea>
+                        </div><br>
+                    </div>
+                    <div class="myp">(*): Information requise</div>
+                    <input class="mop" type="submit" value="Envoyer" href="Zomvid.html">
+                </div>
+            </form>
+        </div>
+        <div class="container col-md-4">
+            <img src="cartoon-owl.jpg" alt="Mail" class="container-fluid">
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="left">
+                <img class="logo_footer" title="logo_blanc" src="logo_blanc.PNG" alt="logo_nemelade" />
+            </div>
+            <div class="middle">
+                <div>
+                    <span class="footer_link">A propos</span>
+                    <span class="footer_link">-</span>
+                    <span class="footer_link">Mentions légales</span>
+                    <span class="footer_link">-</span>
+                    <a class="footer_contact" href="contact.html">Contact</a>
+
+                </div>
+                <div>
+                    <p>Copyright ©2021 Nemelade Inc. Tous droits réservés.</p>
+                </div>
+            </div>
+            <div class="right">
+                <img class="logo_social" title="logo_twitter" src="logo_twitter.PNG" alt="logo_twitter" />
+                <img class="logo_social" title="logo_facebook" src="logo_facebook.PNG" alt="logo_facebook" />
+                <img class="logo_social" title="logo_discord" src="logo_discord.PNG" alt="logo_discord" />
+                <img class="logo_social" title="logo_whatsapp" src="logo_whatsapp.PNG" alt="logo_whatsapp" />
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
