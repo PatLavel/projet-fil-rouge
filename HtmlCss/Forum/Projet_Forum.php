@@ -24,7 +24,9 @@
             </div>
             <div class="h_right1">
                 <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="../user_pic.png" alt="logo_nemelade" /></a>
-                <div class="h_right2"><a href="Connexion.html" class="lien_co">Connexion</a><a href="creation_compte.html" class="lien_insc">Inscription</a>
+                <div class="h_right2">
+                    <a href="../Connexion.html" class="lien_co">Connexion</a>
+                    <a href="../creation_compte.html" class="lien_insc">Inscription</a>
                 </div>
             </div>
         </div>
@@ -32,10 +34,13 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-10">
+            <div class="col-lg-2">
+            </div>
+            
+            <div class="col-lg-8">
                 <div class="rounded block_forum">
                     <div class="rounded bar_title_forum">
-                        <img class="petit_logo" src="logo_blanc - Copie.png" alt="">
+                        <img class="petit_logo" src="logo_blanc_icone.png" alt="">
                         <h1 class="title_forum">Forums</h1>
                     </div>
 
@@ -64,18 +69,13 @@
                                 <div class="col-lg-4 search">
                                     <form class="d-flex search">
                                         <input class="form-control me-2" type="search" placeholder="Recherche..." aria-label="Search">
-                                        <button class="btn btn-outline-success button_search" type="submit">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                            </svg>
-                                        </button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <table class="table table-warning table-striped table-hover table_sujet">
+                    <table class="table table-borderless table-striped table-hover table_sujet">
                         <thead class="table_head">
                             <tr>
                                 <th class="colonne_sujet">
@@ -119,7 +119,7 @@
             <div class="col-lg-2">
                 <div class="block_button_top">
                     <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#485154" class="bi bi-arrow-up-circle-fill button_top" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="#485154" class="bi bi-arrow-up-circle-fill button_top" viewBox="0 0 16 16">
                             <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
                         </svg>
                     </a>
@@ -135,11 +135,11 @@
             </div>
             <div class="middle">
                 <div>
-                    <span class="footer_link">A propos</span>
+                    <a class="a_footer_link" href="../explication_concept.html">A propos</a>
                     <span class="footer_link">-</span>
                     <span class="footer_link">Mentions légales</span>
                     <span class="footer_link">-</span>
-                    <a class="footer_contact" href="contact.html">Contact</a>
+                    <a class="a_footer_link" href="../contact.html">Contact</a>
 
                 </div>
                 <div>
