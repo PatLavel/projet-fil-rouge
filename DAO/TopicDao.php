@@ -1,18 +1,17 @@
 <?php
+include_once("../Model/Topic.php");
 
-use Topic as GlobalTopic;
-
-class Topic
+class TopicDAO
 {
-    function addTopic(Topic $topic): void
+    public function addTopic(Topic $topic): void
     {
-        $id = $topic->getId();
         $titre = $topic->getTitre();
         $message = $topic->getMessage();
 
-        $bdd = new PDO("127.0.0.1;dbname=nemelade", "admin", "admin");
-        $stmt = $bdd->prepare("INSERT INTO topic (id, titre, message, dateAjout ) VALUES (?, ?, ?, sysdate();");
-        $stmt->bindParam("iss", $id, $titre, $message);
+        $bdd = new PDO("mysql:host=localhost;dbname=nemelade", "root", "");
+        $stmt = $bdd->prepare("INSERT INTO topic (titre, message, dateAjout ) VALUES (?, ?, sysdate());");
+        $stmt->bindParam(1, $titre, PDO::PARAM_STR, 500);
+        $stmt->bindParam(2, $message, PDO::PARAM_STR, 50);
         $stmt->execute();
     }
 }
