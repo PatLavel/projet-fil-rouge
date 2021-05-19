@@ -41,4 +41,39 @@ function htmlheader(): void
 
 <?php
 }
+
+
+function htmlfooter(): void
+{
+?>
+    <footer>
+        <div class="footer">
+            <div class="left">
+                <img class="logo_footer" title="logo_blanc" src="../Style/logo_blanc.PNG" alt="logo_nemelade" />
+            </div>
+            <div class="middle">
+                <div>
+                    <span class="footer_link">A propos</span>
+                    <span class="footer_link">-</span>
+                    <span class="footer_link">Mentions légales</span>
+                    <span class="footer_link">-</span>
+                    <span class="footer_link">Contact</span>
+                </div>
+                <div>
+                    <p>Copyright ©2021 Nemelade Inc. Tous droits réservés.</p>
+                </div>
+            </div>
+            <div class="right">
+                <img class="logo_social" title="logo_twitter" src="../Style/logo_twitter.PNG" alt="logo_twitter" />
+                <img class="logo_social" title="logo_facebook" src="../Style/logo_facebook.PNG" alt="logo_facebook" />
+                <img class="logo_social" title="logo_discord" src="../Style/logo_discord.PNG" alt="logo_discord" />
+                <img class="logo_social" title="logo_whatsapp" src="../Style/logo_whatsapp.PNG" alt="logo_whatsapp" />
+            </div>
+        </div>
+    </footer>
+
+    
+
+<?php
+}
 ?>
