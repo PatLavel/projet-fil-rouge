@@ -2,7 +2,10 @@
 <html lang="en">
 
 <?php
+include_once("../Service/TopicService.php");
 include_once("../View/CommonView.php");
+
+session_start();
 $title = "Forums - Nemelade";
 $hrefStyle = "../Style/Projet_Forum.css";
 htmlhead($title, $hrefStyle);
@@ -76,19 +79,21 @@ htmlhead($title, $hrefStyle);
                         </thead>
                         <tbody>
                             <?php
-                            $a = 0;
-                            while ($a < 15) {
+                            $data = (new TopicService())->displayTopic();
+
+                            foreach ($data as $value) {
+                                $_SESSION['id'] = $value->getId();
+                                echo $_SESSION['id'];
                                 echo '<tr>';
                                 echo '<td class="colonne_sujet">
-                                <span class="nom_sujet"><a class="lien_sujet" href="Projet_Sujet.php">Sujet ceci est le nom du sujet</a></span>
+                                <span class="nom_sujet"><a class="lien_sujet" href="Projet_Sujet.php">' . $value->getTitre() . '</a></span>
                                 <br>
-                                <span class="nom_crea_date">Par nomCreateur le 15 Mars 2021</span></td>';
+                                <span class="nom_crea_date">Par nomCreateur le '. $value->getDateAjout().'</span></td>';
                                 echo '<td class="forum_reponses">482</td>';
                                 echo '<td class="forum_vues">1506</td>';
                                 echo '<td class="forum_notes">+48</td>';
                                 echo '<td class="forum_activite">19 Mars 2021</td>';
                                 echo '</tr>';
-                                $a++;
                             }
                             ?>
                         </tbody>

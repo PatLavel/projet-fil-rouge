@@ -14,4 +14,21 @@ class TopicDAO
         $stmt->bindParam(2, $message, PDO::PARAM_STR, 50);
         $stmt->execute();
     }
+
+    public function displayTopic(): array
+    {
+        $bdd = new PDO("mysql:host=localhost;dbname=nemelade", "root", "");
+        $stmt = $bdd->prepare("SELECT * FROM topic;");
+        $stmt->execute();
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($data as $value) {
+            $employe[] = (new Topic())
+                ->setId($value["id"])
+                ->setTitre($value['titre'])
+                ->setMessage($value['message'])
+                ->setDateAjout($value['dateAjout']);
+        }
+        return $employe;
+    }
 }
