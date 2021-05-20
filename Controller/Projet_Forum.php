@@ -83,12 +83,11 @@ htmlhead($title, $hrefStyle);
 
                             foreach ($data as $value) {
                                 $_SESSION['id'] = $value->getId();
-                                echo $_SESSION['id'];
                                 echo '<tr>';
                                 echo '<td class="colonne_sujet">
                                 <span class="nom_sujet"><a class="lien_sujet" href="Projet_Sujet.php">' . $value->getTitre() . '</a></span>
                                 <br>
-                                <span class="nom_crea_date">Par nomCreateur le '. $value->getDateAjout().'</span></td>';
+                                <span class="nom_crea_date">Par nomCreateur le ' . $value->getDateAjout() . '</span></td>';
                                 echo '<td class="forum_reponses">482</td>';
                                 echo '<td class="forum_vues">1506</td>';
                                 echo '<td class="forum_notes">+48</td>';
@@ -112,32 +111,7 @@ htmlhead($title, $hrefStyle);
         </div>
     </div>
 
-    <footer>
-        <div class="footer">
-            <div class="left">
-                <img class="logo_footer" title="logo_blanc" src="../Style/logo_blanc.PNG" alt="logo_nemelade" />
-            </div>
-            <div class="middle">
-                <div>
-                    <a class="a_footer_link" href="../explication_concept.html">A propos</a>
-                    <span class="footer_link">-</span>
-                    <span class="footer_link">Mentions légales</span>
-                    <span class="footer_link">-</span>
-                    <a class="a_footer_link" href="../contact.html">Contact</a>
-
-                </div>
-                <div>
-                    <p>Copyright ©2021 Nemelade Inc. Tous droits réservés.</p>
-                </div>
-            </div>
-            <div class="right">
-                <img class="logo_social" title="logo_twitter" src="../Style/logo_twitter.PNG" alt="logo_twitter" />
-                <img class="logo_social" title="logo_facebook" src="../Style/logo_facebook.PNG" alt="logo_facebook" />
-                <img class="logo_social" title="logo_discord" src="../Style/logo_discord.PNG" alt="logo_discord" />
-                <img class="logo_social" title="logo_whatsapp" src="../Style/logo_whatsapp.PNG" alt="logo_whatsapp" />
-            </div>
-        </div>
-    </footer>
+    <?php htmlfooter(); ?>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>

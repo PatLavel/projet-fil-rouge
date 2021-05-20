@@ -3,6 +3,7 @@ class Reponse
 {
     private $id;
     private $message;
+    private $dateAjout;
     private $jaime;
     private $jaimepas;
     private $id_topic;
@@ -43,6 +44,26 @@ class Reponse
     public function setMessage($message)
     {
         $this->message = $message;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of dateAjout
+     */
+    public function getDateAjout()
+    {
+        return $this->dateAjout;
+    }
+
+    /**
+     * Set the value of dateAjout
+     *
+     * @return  self
+     */
+    public function setDateAjout($dateAjout)
+    {
+        $this->dateAjout = $dateAjout;
 
         return $this;
     }

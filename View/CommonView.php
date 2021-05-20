@@ -26,7 +26,7 @@ function htmlheader(): void
             <div class="h_middle">
                 <a href="" class="HeadText">Accueil</a>
                 <a href="../Controller/Projet_Forum.php" class="HeadText">Forum</a>
-                <a href="../Controller/Zomvid.html" class="HeadText">Actualités</a>
+                <a href="../Controller/Zomvid.php" class="HeadText">Actualités</a>
                 <a href="" class="HeadText">Arène</a>
             </div>
             <div class="h_right1">
@@ -57,7 +57,7 @@ function htmlfooter(): void
                     <span class="footer_link">-</span>
                     <span class="footer_link">Mentions légales</span>
                     <span class="footer_link">-</span>
-                    <span class="footer_link">Contact</span>
+                    <a class="a_footer_link" href="../Controller/contact.php">Contact</a>
                 </div>
                 <div>
                     <p>Copyright ©2021 Nemelade Inc. Tous droits réservés.</p>
@@ -72,7 +72,7 @@ function htmlfooter(): void
         </div>
     </footer>
 
-    
+
 
 <?php
 }

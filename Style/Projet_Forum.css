@@ -275,12 +275,18 @@ hr {
     justify-content: space-between;
 }
 
-.repondre_footer_suj {
-    text-decoration: none;
+.footer_suj_sousRep {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.repondre_footer_suj:hover {
-    text-decoration: none;
+.repondre_footer_suj {
+    background-color: transparent;
+    border: none;
+}
+
+#reponseMessage {
+    border: 1px solid #ced4da;
 }
 
 .button_footer_suj {
