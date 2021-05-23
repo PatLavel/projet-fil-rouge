@@ -1,7 +1,7 @@
 <?php
 class Topic
 {
-    private $id;
+    private $idTopic;
     private $titre;
     private $message;
     private $dateAjout;
@@ -10,21 +10,21 @@ class Topic
     private $id_utilisateur;
 
     /**
-     * Get the value of id
+     * Get the value of idTopic
      */
-    public function getId()
+    public function getIdTopic()
     {
-        return $this->id;
+        return $this->idTopic;
     }
 
     /**
-     * Set the value of id
+     * Set the value of idTopic
      *
      * @return  self
      */
-    public function setId($id)
+    public function setIdTopic($idTopic)
     {
-        $this->id = $id;
+        $this->idTopic = $idTopic;
 
         return $this;
     }

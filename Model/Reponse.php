@@ -1,29 +1,31 @@
 <?php
-class Reponse
+include_once("../Model/Topic.php");
+
+class Reponse extends Topic
 {
-    private $id;
+    private $idReponse;
     private $message;
     private $dateAjout;
     private $jaime;
     private $jaimepas;
-    private $id_topic;
+    private $idTopic;
 
     /**
-     * Get the value of id
+     * Get the value of idReponse
      */
-    public function getId()
+    public function getIdReponse()
     {
-        return $this->id;
+        return $this->idReponse;
     }
 
     /**
-     * Set the value of id
+     * Set the value of idReponse
      *
      * @return  self
      */
-    public function setId($id)
+    public function setIdReponse($idReponse)
     {
-        $this->id = $id;
+        $this->idReponse = $idReponse;
 
         return $this;
     }
@@ -109,21 +111,21 @@ class Reponse
     }
 
     /**
-     * Get the value of id_topic
-     */
-    public function getId_topic()
+     * Get the value of idTopic
+     */ 
+    public function getIdTopic()
     {
-        return $this->id_topic;
+        return $this->idTopic;
     }
 
     /**
-     * Set the value of id_topic
+     * Set the value of idTopic
      *
      * @return  self
-     */
-    public function setId_topic($id_topic)
+     */ 
+    public function setIdTopic($idTopic)
     {
-        $this->id_topic = $id_topic;
+        $this->idTopic = $idTopic;
 
         return $this;
     }

@@ -13,4 +13,10 @@ class ReponseService
         $data = (new ReponseDAO())->displayReponse();
         return $data;
     }
+
+    public function counterReponse(): int
+    {
+        $data = (new ReponseDAO())->counterReponse();
+        return $data;
+    }
 }

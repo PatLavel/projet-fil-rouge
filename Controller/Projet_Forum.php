@@ -82,10 +82,11 @@ htmlhead($title, $hrefStyle);
                             $data = (new TopicService())->displayTopic();
 
                             foreach ($data as $value) {
-                                $_SESSION['id'] = $value->getId();
+                                $_SESSION['id'] = $value->getIdTopic();
+                                $id = $value->getIdTopic();
                                 echo '<tr>';
                                 echo '<td class="colonne_sujet">
-                                <span class="nom_sujet"><a class="lien_sujet" href="Projet_Sujet.php">' . $value->getTitre() . '</a></span>
+                                <span class="nom_sujet"><a class="lien_sujet" href="Projet_Sujet.php?id=' . $id . '">' . $value->getTitre() . '</a></span>
                                 <br>
                                 <span class="nom_crea_date">Par nomCreateur le ' . $value->getDateAjout() . '</span></td>';
                                 echo '<td class="forum_reponses">482</td>';

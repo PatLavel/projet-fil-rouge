@@ -18,13 +18,13 @@ class TopicDAO
     public function displayTopic(): array
     {
         $bdd = new PDO("mysql:host=localhost;dbname=nemelade", "root", "");
-        $stmt = $bdd->prepare("SELECT * FROM topic;");
+        $stmt = $bdd->prepare("SELECT id, titre, message, dateAjout, DATE_FORMAT(dateAjout, '%d/%m/%Y à %H:%i:%s') as dateAjout FROM topic;");
         $stmt->execute();
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($data as $value) {
             $employe[] = (new Topic())
-                ->setId($value["id"])
+                ->setIdTopic($value["id"])
                 ->setTitre($value['titre'])
                 ->setMessage($value['message'])
                 ->setDateAjout($value['dateAjout']);
