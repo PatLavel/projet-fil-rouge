@@ -1,0 +1,9 @@
+Ajout d'une colonne pour hasher le mdp dans la table utilisateur:
+ALTER TABLE utilisateur ADD hash VARCHAR(255);
+
+Commandes pour ajouter les combats prévus:
+INSERT INTO evenement (id, libelle, dateDebut, dateFin, combattant1, combattant2) SELECT MAX(id)+1,"STARATEGOS AFFRONTE WEREWOLF", "2021-07-02", "2021-07-02", "STARATEGOS", "WEREWOLF" FROM evenement;
+INSERT INTO evenement (id, libelle, dateDebut, dateFin, combattant1, combattant2) SELECT MAX(id)+1,"GORILLA AFFRONTE DEATHBRINGER", "2021-07-10", "2021-07-10", "GORILLA", "DEATHBRINGER" FROM evenement;
+INSERT INTO evenement (id, libelle, dateDebut, dateFin, combattant1, combattant2) SELECT MAX(id)+1,"GORILLA AFFRONTE DEATHBRINGER", "2021-07-10", "2021-07-10", "GORILLA", "DEATHBRINGER" FROM evenement;
+INSERT INTO evenement (id, libelle, dateDebut, dateFin, combattant1, combattant2) SELECT MAX(id)+1,"DEMON'S KATANA AFFRONTE REVOLVER", "2021-07-17", "2021-07-17", "DEMON'S KATANA", "REVOLVER" FROM evenement;
+
