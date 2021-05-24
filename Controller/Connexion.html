@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="..style.css">
     <title>Nemelade : connexion</title>
 </head>
 
@@ -32,18 +32,18 @@
 
     <div class="all_content">
         <div class="connection">
-            <form action="fichier_cible" method="post">
+            <form action="script_connexion.php" method="post">
             
                     <div>
                     <img class="profile" title="logo" src="user_pic.png"alt="user_picture"/></a>
                     </div>
                     <div>
-                        <input class="case" type="text" id="pseudo" name="user_pseudo" placeholder="Pseudo" autofocus required>
+                        <input class="case" type="text" id="pseudo" name="user_login" placeholder="Pseudo" autofocus required>
                     </div>
                     <div >
                         <input class="case" type="password" id="password" name="user_password" placeholder="Mot de passe" required>
                     </div >
-                    <button formaction="modification_compte.html" class="button" >Se connecter</button>
+                    <button formaction="script_connexion.php" class="button" >Se connecter</button>
                     <p class="password_lost">Mot de passe oublié?</p>
             </form>
         </div>
