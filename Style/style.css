@@ -1,3 +1,10 @@
+.status_connexion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .all_content {
     display: flex;
     justify-content: center;
