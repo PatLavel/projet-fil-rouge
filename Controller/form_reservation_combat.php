@@ -43,9 +43,9 @@ session_start();
     <h2 class="myh2">Assistez à un des combats de l'arène!</h2>
 
     <?php
-    $result = userEarnMoney($_SESSION['user_login']);
+    $result = userEarnedMoney($_SESSION['user_login']);
 
-    function userEarnMoney($login)
+    function userEarnedMoney($login)
     {
 
         $mysqli = new mysqli('127.0.0.1', 'root', '', 'nemelade');
@@ -60,15 +60,15 @@ session_start();
     }
     ?>
 
-
-    <div class="subscription">
-        <div class="subscription_form">
-            <p class="myp">Vous disposez actuellement de <?php echo $result['round(argent)'] ?> PO.</p>
-            <p class="myp">Êtes vous certain de vouloir dépenser 10 PO pour assister à ce match?</p>
-            <div class="validation">
+    <div class="reservation">
+        <div class="subscription">
+            <div class="subscription_form">
+                <p class="myp">Vous disposez actuellement de <?php echo $result['round(argent)'] ?> PO.</p>
+                <p class="myp">Êtes vous certain de vouloir dépenser 10 PO pour assister à ce match?</p>
+                <div class="validation">
+                </div>
+                <input type="submit" class="button" value="Je réserve ma place!" href="">
             </div>
-            <input type="submit" class="button" value="Je réserve ma place!" href="">
-
         </div>
     </div>
 
