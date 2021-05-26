@@ -1,5 +1,6 @@
 <?php
 include_once("../Model/Reponse.php");
+require_once("../Exception/ReponseDAOException.php");
 
 class ReponseDAO
 {
@@ -33,16 +34,25 @@ class ReponseDAO
         return $reponse;
     }
 
-    public function counterReponse(): int
+    public function counterReponse(): array
     {
-        $bdd = new PDO("mysql:host=localhost;dbname=nemelade", "root", "");
-        $stmt = $bdd->prepare("SELECT COUNT(*) as counter FROM reponse;");
-        $stmt->execute();
-        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        try {
+            $bdd = new PDO("mysql:host=localhost;dbname=nemelade", "root", "");
+            $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $bdd->prepare("SELECT COUNT(*) as counterReponse, id_Topic FROM reponse GROUP BY id_topic;");
+            $stmt->execute();
+            $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            $message = $e->getMessage();
+            $code = $e->getCode();
+            throw new ReponseDAOException($message, $code);
+        }
 
         foreach ($data as $value) {
-            $counter = $value["counter"];
+            $counterByIdTopic[] = (new Reponse())
+                ->setCounterReponse($value["counterReponse"])
+                ->setIdTopic($value["id_Topic"]);
         }
-        return $counter;
+        return $counterByIdTopic;
     }
 }

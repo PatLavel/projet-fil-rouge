@@ -1,7 +1,9 @@
 <?php
 include_once("../DAO/ReponseDAO.php");
+require_once("../Exception/ReponseDAOException.php");
+require_once("../Exception/ReponseServiceException.php");
 
-class ReponseService 
+class ReponseService
 {
     public function addReponse(Reponse $reponse): void
     {
@@ -14,9 +16,15 @@ class ReponseService
         return $data;
     }
 
-    public function counterReponse(): int
+    public function counterReponse(): array
     {
-        $data = (new ReponseDAO())->counterReponse();
+        try {
+            $data = (new ReponseDAO())->counterReponse();
+        } catch (ReponseDAOException $e) {
+            $message = $e->getMessage();
+            $code = $e->getCode();
+            throw new ReponseServiceException($message, $code);
+        }
         return $data;
     }
 }

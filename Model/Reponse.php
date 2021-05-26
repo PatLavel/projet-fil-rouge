@@ -8,6 +8,7 @@ class Reponse extends Topic
     private $dateAjout;
     private $jaime;
     private $jaimepas;
+    private $counterReponse;
     private $idTopic;
 
     /**
@@ -111,8 +112,28 @@ class Reponse extends Topic
     }
 
     /**
+     * Get the value of counterReponse
+     */
+    public function getCounterReponse()
+    {
+        return $this->counterReponse;
+    }
+
+    /**
+     * Set the value of counterReponse
+     *
+     * @return  self
+     */
+    public function setCounterReponse($counterReponse)
+    {
+        $this->counterReponse = $counterReponse;
+
+        return $this;
+    }
+
+    /**
      * Get the value of idTopic
-     */ 
+     */
     public function getIdTopic()
     {
         return $this->idTopic;
@@ -122,7 +143,7 @@ class Reponse extends Topic
      * Set the value of idTopic
      *
      * @return  self
-     */ 
+     */
     public function setIdTopic($idTopic)
     {
         $this->idTopic = $idTopic;

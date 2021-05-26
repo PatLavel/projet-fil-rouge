@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php
+include_once("../Service/ReponseService.php");
 include_once("../Service/TopicService.php");
 include_once("../View/CommonView.php");
 
@@ -80,20 +81,38 @@ htmlhead($title, $hrefStyle);
                         <tbody>
                             <?php
                             $data = (new TopicService())->displayTopic();
+                            $dateCounterReponse = (new ReponseService())->counterReponse();
+                            $counterReponse = 0;
 
                             foreach ($data as $value) {
                                 $_SESSION['id'] = $value->getIdTopic();
                                 $id = $value->getIdTopic();
-                                echo '<tr>';
-                                echo '<td class="colonne_sujet">
-                                <span class="nom_sujet"><a class="lien_sujet" href="Projet_Sujet.php?id=' . $id . '">' . $value->getTitre() . '</a></span>
-                                <br>
-                                <span class="nom_crea_date">Par nomCreateur le ' . $value->getDateAjout() . '</span></td>';
-                                echo '<td class="forum_reponses">482</td>';
-                                echo '<td class="forum_vues">1506</td>';
-                                echo '<td class="forum_notes">+48</td>';
-                                echo '<td class="forum_activite">19 Mars 2021</td>';
-                                echo '</tr>';
+                            ?>
+                                <tr>
+                                    <td class="colonne_sujet">
+                                        <span class="nom_sujet"><a class="lien_sujet" href="Projet_Sujet.php?id=<?php echo $id ?>"><?php echo $value->getTitre() ?></a></span>
+                                        <br>
+                                        <span class="nom_crea_date">Par nomCreateur le <?php $value->getDateAjout() ?></span>
+                                    </td>
+                                    <td class="forum_reponses">
+                                        <?php
+                                        foreach ($dateCounterReponse as $value) {
+                                            $id2 = $value->getIdTopic();
+                                            if ($id2 == $id) {
+                                                $counterReponse = $value->getCounterReponse();
+                                                echo $counterReponse;
+                                            }
+                                        }
+                                        if ($counterReponse == 0) {
+                                            echo $counterReponse;
+                                        }
+                                        ?>
+                                    </td>
+                                    <td class="forum_vues">1506</td>
+                                    <td class="forum_notes">+48</td>
+                                    <td class="forum_activite">19 Mars 2021</td>
+                                </tr>
+                            <?php
                             }
                             ?>
                         </tbody>

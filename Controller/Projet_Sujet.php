@@ -5,6 +5,7 @@
 include_once("../Service/ReponseService.php");
 include_once("../Service/TopicService.php");
 include_once("../View/CommonView.php");
+require_once("../Exception/ReponseServiceException.php");
 
 $title = "Sujet - Nemelade";
 $hrefStyle = "../Style/Projet_Forum.css";
@@ -14,12 +15,13 @@ htmlhead($title, $hrefStyle);
 <body>
     <?php
     session_start();
-    htmlheader();
-    $data = (new TopicService())->displayTopic();
+    $idSession = $_GET['id'];
 
-    foreach ($data as $value) {
+    htmlheader();
+
+    $dataDisplayTopic = (new TopicService())->displayTopic();
+    foreach ($dataDisplayTopic as $value) {
         $id = $value->getIdTopic();
-        $idSession = $_GET['id'];
         if ($id == $idSession) {
             $titre = $value->getTitre();
             $message = $value->getMessage();
@@ -27,7 +29,22 @@ htmlhead($title, $hrefStyle);
         }
     }
 
-    $counter = (new ReponseService())->counterReponse();
+    try {
+        $dateCounterReponse = (new ReponseService())->counterReponse();
+    } catch (ReponseServiceException $e) {
+        $codeError = $e->getCode();
+        $messageError = $e->getMessage();
+    }
+    if (!isset($messageError)) {
+        $counterReponse = 0;
+        foreach ($dateCounterReponse as $value) {
+            $id2 = $value->getIdTopic();
+            if ($id2 == $idSession) {
+                $counterReponse = $value->getCounterReponse();
+            }
+        }
+    }
+
 
     if (isset($_POST["envoyer"])) {
         $reponse = (new Reponse())->setMessage($_POST["message"])->setIdTopic($_GET["id"]);
@@ -102,8 +119,14 @@ htmlhead($title, $hrefStyle);
                 </div>
                 <div class="rounded block_rep">
                     <div class="bar_info_rep">
-                        <div>
-                            <p class="nb_rep"><?php echo $counter ?> Réponses</p>
+                        <div class="nb_rep">
+                            <?php if (isset($messageError)) { ?>
+                                <p>
+                                <?php
+                                echo $messageError;
+                            } else {
+                                echo $counterReponse;
+                            } ?> Réponses</p>
                         </div>
                         <select class="form-select form-select-sm tri">
                             <option value="1">Dernières</option>
@@ -115,22 +138,22 @@ htmlhead($title, $hrefStyle);
                     <div class="block_sujet_rep">
 
                         <?php
-                        $data2 = (new ReponseService())->displayReponse();
+                        $datadisplayReponse = (new ReponseService())->displayReponse();
 
-                        foreach ($data2 as $value2) {
-                            $_SESSION['id'] = $value2->getIdReponse();
+                        foreach ($datadisplayReponse as $value) {
+                            $_SESSION['id'] = $value->getIdReponse();
                             $getId = $_GET["id"];
-                            $idTopic = $value2->getIdTopic();
+                            $idTopic = $value->getIdTopic();
                             if ($getId == $idTopic) {
                         ?>
                                 <div class="sujet_rep">
                                     <div class="rounded bar_title_rep">
                                         <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
                                         <div class="suj_title_nom">
-                                            <p class="suj_title_nom">Par nomCreateur le <?php echo $value2->getDateAjout() ?></p>
+                                            <p class="suj_title_nom">Par nomCreateur le <?php echo $value->getDateAjout() ?></p>
                                         </div>
                                     </div>
-                                    <p class="sujet_contenu_texte"><?php echo $value2->getMessage() ?></p>
+                                    <p class="sujet_contenu_texte"><?php echo $value->getMessage() ?></p>
                                     <hr>
                                     <div class="footer_suj">
                                         <div>
