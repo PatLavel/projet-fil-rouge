@@ -27,7 +27,7 @@ function htmlheader(): void
                 <a href="" class="HeadText">Accueil</a>
                 <a href="../Controller/Projet_Forum.php" class="HeadText">Forum</a>
                 <a href="../Controller/Zomvid.php" class="HeadText">Actualités</a>
-                <a href="" class="HeadText">Arène</a>
+                <a href="../Controller/arene.php" class="HeadText">Arène</a>
             </div>
             <div class="h_right1">
                 <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
