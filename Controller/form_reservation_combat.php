@@ -53,7 +53,8 @@ htmlhead($title, $hrefStyle);
                 <p class="myp">Êtes vous certain de vouloir dépenser 10 PO pour assister à ce match?</p>
                 <div class="validation">
                 </div>
-                <input type="submit" class="button" value="Je réserve ma place!" href="">
+                <form><button formaction="arene.php" class="button">Je réserve ma place!</button></form>
+
             </div>
         </div>
     </div>
