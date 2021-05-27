@@ -30,9 +30,9 @@ function htmlheader(): void
                 <a href="../Controller/Zomvid.php" class="HeadText">Actualités</a>
                 <a href="../Controller/arene.php" class="HeadText">Arène</a>
             </div>
-            <div class="h_right1">
+            <div class="h_right">
                 <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
-                <div class="h_right2">
+                <div class="h_right">
                     <a href="../Controller/Connexion.php" class="lien_co">Connexion</a>
                     <a href="../Controller/creation_compte.php" class="lien_insc">Inscription</a>
                 </div>

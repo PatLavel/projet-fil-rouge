@@ -12,16 +12,17 @@ function displayContact()
     $hrefStyle = "../Style/Projet_Forum.css";
     htmlhead($title, $hrefStyle);
     ?>
+    <?php
+    htmlheader();
+    ?>
 
     <body>
-        <?php
-        htmlheader();
-        ?>
+
 
         <div class="row">
             <div class="container  col-md-6 offset-md-2">
                 <h2 class="text-center map">Nous contacter:</h2>
-                <form action= "contactMail.php" method="POST">
+                <form action="contactMail.php" method="POST">
                     <div class="container">
                         <h3 class="map">Informations de contact</h3>
                         <div class="row">
@@ -33,7 +34,7 @@ function displayContact()
                         <div class="row">
                             <div class="col-md-2 myp">Prenom*</div>
                             <div class="col-md-8 myp">
-                                <input  class="form-control" type="Prenom" name="Prenom">
+                                <input class="form-control" type="Prenom" name="Prenom">
                             </div><br>
                         </div>
                         <div class="row">
@@ -72,7 +73,7 @@ function displayContact()
                             </div><br>
                         </div>
                         <div class="myp">(*): Information requise</div>
-                        <input class="mop" type="submit" value="Envoyer" >
+                        <input class="mop" type="submit" value="Envoyer">
                     </div>
                 </form>
             </div>
@@ -80,11 +81,12 @@ function displayContact()
                 <img src="../Style/cartoon-owl.jpg" alt="Mail" class="container-fluid">
             </div>
         </div>
-        
-        <?php
-        htmlfooter();
-        ?>
+
+
     </body>
+    <?php
+    htmlfooter();
+    ?>
 
     </html>
 

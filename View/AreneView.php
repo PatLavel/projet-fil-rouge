@@ -14,12 +14,11 @@ function displayArene($events)
     $hrefStyle = "../Style/Projet_Forum.css";
     htmlhead($title, $hrefStyle);
     ?>
+    <?php
+    htmlheader();
+    ?>
 
     <body>
-        <?php
-        htmlheader();
-
-        ?>
 
         <div class="arena_content">
 
@@ -36,9 +35,6 @@ function displayArene($events)
             </div>
             <?php
             for ($i = 0; $i < sizeof($events); $i++) {
-
-
-
             ?>
                 <div>
                     <h2 class="versus"><?php echo $events[$i]->getLibelle(); ?></h2>
@@ -52,20 +48,17 @@ function displayArene($events)
                     <div><a class='button' href='Pari_evenement.php?id=$idMatch'>Parier</a></div>
                 </div>
 
-
-
             <?php
             }
             ?>
 
-
         </div>
 
 
-        <?php
-        htmlfooter();
-        ?>
     </body>
+    <?php
+    htmlfooter();
+    ?>
 
     </html>
 
