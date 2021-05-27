@@ -16,7 +16,7 @@ class EvenementDAO extends CommonDAO
         //var_dump($result) ;
         foreach ($row as $value) {
             
-            $evenement = (new Evenement())->setId($value["id"])->setLibelle($value["libelle"])->setDateDebut($value["dateDebut"])->setDateFin($value["dateFin"])->setCombattant1($value["combattant1"])->setCombattant2($value["combattant2"]);
+            $evenement = (new Evenement())->setId($value["id"])->setLibelle($value["libelle"])->setDateDebut($value["dateDebut"])->setDateFin($value["dateFin"])->setCombattant1($value["combattant1"])->setCombattant2($value["combattant2"])->setImgMatch($value["img"]);
             $tabEv[] = $evenement;
         }
         //$result->free();
