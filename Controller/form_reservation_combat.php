@@ -1,18 +1,17 @@
 <?php
 session_start();
+include_once(__DIR__ . "/../view/CommonView.php");
 ?>
 
 <!DOCTYPE html>
 <html>
 
-<head>
+<?php
+$title = "Arene";
+$hrefStyle = "../Style/Projet_Forum.css";
+htmlhead($title, $hrefStyle);
+?>
 
-    <meta charset="utf-8" />
-    <title>Nemelade : reservation</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
-
-</head>
 
 <body>
     <?php
@@ -21,23 +20,10 @@ session_start();
     }
     ?>
 
-    <header>
-        <div class="header">
-            <div class="h_left">
-                <a href="accueil.html"><img class="logo_nemelade" title="logo_blanc" src="logo_blanc.png" alt="logo_nemelade" /></a>
-            </div>
-            <div class="h_middle">
-                <a href="Projet_Forum.php" class="HeadText1">Forum</a>
-                <a href="Zomvid.html" class="HeadText2">Actualités</a>
-                <a href="Arene.html" class="HeadText3">Arène</a>
-            </div>
-            <div class="h_right1">
-                <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="user_pic.png" alt="logo_nemelade" /></a>
-            </div>
-            <div class="h_right2"><a href="Connexion.html" class="lien_co">Connexion</a><br><a href="creation_compte.html" class="lien_insc">Inscription</a>
-            </div>
-        </div>
-    </header>
+    <?php
+    htmlheader();
+
+    ?>
 
     <h1 class="myh1">Envie d'un peu d'action?</h1>
     <h2 class="myh2">Assistez à un des combats de l'arène!</h2>
@@ -95,6 +81,10 @@ session_start();
             <img class="logo_social" title="logo_whatsapp" src="logo_whatsapp.PNG" alt="logo_whatsapp" />
         </div>
     </div>
+    <?php
+    htmlfooter();
+
+    ?>
 </body>
 
 </html>

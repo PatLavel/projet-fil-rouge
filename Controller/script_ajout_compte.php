@@ -32,7 +32,7 @@
 
     echo "<div class='insert_account'>
                 <div><p>Votre compte a été créé avec succès.</p></div>
-                <div><a class='btn btn-dark btn-sm' href='Connexion.html'>valider</a></div>
+                <div><a class='btn btn-dark btn-sm' href='Connexion.php'>valider</a></div>
                 </div>";
 
     ?>
