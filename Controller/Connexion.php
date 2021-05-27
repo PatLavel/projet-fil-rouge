@@ -40,7 +40,7 @@ htmlhead($title, $hrefStyle);
         <div class="bloc_join">
             <h3 class="myh3">Vous n'êtes pas encore citoyen de Nemelade?</br>Rejoignez nous!</h3>
             <p class="join_us">Devenir citoyen de Nemelade, c'est rejoindre une communauté qui grandit sans cesse. Les citoyens de la ville ont accès à tout le contenu du site, y compris les forums de discussion.</p>
-            <form><button formaction="creation_compte.html" class="button">J'en suis!</button></form>
+            <form><button formaction="creation_compte.php" class="button">J'en suis!</button></form>
         </div>
     </div>
 
