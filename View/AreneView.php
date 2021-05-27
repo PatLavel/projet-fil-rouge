@@ -39,7 +39,9 @@ function displayArene($events)
                 <div>
                     <h2 class="versus"><?php echo $events[$i]->getLibelle(); ?></h2>
 
-                    <!-- <div><img class="arena" title="vs2" src="vs2.png" alt="image_versus_2" /></div> -->
+                                        <div><img class="arena" title="vs2" src="../Style/<?php echo $events[$i]->getImgMatch(); ?>" alt="image_versus_2" /></div>
+                    <div>
+
                     <div>
                         <p><?php echo $events[$i]->getDateDebut(); ?>: <?php echo $events[$i]->getCombattant1(); ?> VS <?php echo $events[$i]->getCombattant2(); ?></p>
                     </div>
