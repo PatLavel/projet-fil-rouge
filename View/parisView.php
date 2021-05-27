@@ -10,7 +10,7 @@ function displayParis($event)
     <html lang="en">
 
     <?php
-    $title = "Arene";
+    $title = "Parier";
     $hrefStyle = "../Style/Projet_Forum.css";
     htmlhead($title, $hrefStyle);
     ?>
@@ -18,19 +18,18 @@ function displayParis($event)
     <body>
         <?php
         htmlheader();
-
         ?>
 
-
-
-        <div>
+        <div class="container-fluid"> 
             <h2 class="versus"><?php echo $event->getLibelle(); ?></h2>
 
             <div>
                 <p><?php echo $event->getDateDebut(); ?>: <?php echo $event->getCombattant1(); ?> VS <?php echo $event->getCombattant2(); ?></p>
             </div>
-            <div><input type="int">votre mise</div>
-            <div><a class='button' href=''>Miser</a></div>
+            <form action="script_paris.php" method="POST">
+            <div>votre mise: <input class="form-control" type="number" name="mise"></div>
+            <div><input type="submit" class="button" value="Miser"> </div>
+            </form>
         </div>
 
 
@@ -41,7 +40,5 @@ function displayParis($event)
     </body>
 
     </html>
-
-
 
 <?php } ?>

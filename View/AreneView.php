@@ -52,6 +52,14 @@ function displayArene($events)
                         <div><?php echo "<a class='button' href='form_reservation_combat.php?id=$idMatch'>Réserver</a>"; ?></div>
                         <div><?php echo "<a class='button' href='Pari_evenement.php?id=$idMatch'>Parier</a>"; ?></div>
                     </div>
+<<<<<<< HEAD
+=======
+                    <?php $idMatch = $events[$i]->getId();
+                    var_dump($idMatch) ?>
+                    <div><?php echo "<a class='button' href='form_reservation_combat.php?id=$idMatch'>Réserver</a>"; ?></div>
+                    <div><?php echo "<a class='button' href='Pari_evenement.php?id=$idMatch'>Parier</a>"; ?></div>
+                </div>
+>>>>>>> 0b8d005 (paris)
 
 
 

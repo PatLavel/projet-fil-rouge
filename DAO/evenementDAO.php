@@ -31,7 +31,7 @@ class EvenementDAO extends CommonDAO
         $stat = $bdd->prepare("SELECT * FROM evenement  WHERE id = :id");
         $stat->execute(['id' =>$id]);
         $row = $stat->fetch();
-        var_dump($row) ;
+        //var_dump($row) ;
         $ev = (new Evenement())->setId($row["id"])->setLibelle($row["libelle"])->setDateDebut($row["dateDebut"])->setDateFin($row["dateFin"])->setCombattant1($row["combattant1"])->setCombattant2($row["combattant2"]); 
 
         return $ev;
