@@ -39,7 +39,7 @@ class ReponseDAO extends CommonDAO
     {
         try {
             $bdd = $this->connexionDatabase();
-            $stmt = $bdd->prepare("SELECT COUNT(*) as counterReponse, id_Topic FROM reponse GROUP BY id_topic;");
+            $stmt = $bdd->prepare("SELECT COUNT(*) as counterReponse, MAX(DATE_FORMAT(dateAjout, '%d/%m/%Y')) as dateAjout, id_Topic FROM reponse GROUP BY id_topic;");
             $stmt->execute();
             $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
@@ -51,6 +51,7 @@ class ReponseDAO extends CommonDAO
         foreach ($data as $value) {
             $counterByIdTopic[] = (new Reponse())
                 ->setCounterReponse($value["counterReponse"])
+                ->setDateAjout($value["dateAjout"])
                 ->setIdTopic($value["id_Topic"]);
         }
         return $counterByIdTopic;

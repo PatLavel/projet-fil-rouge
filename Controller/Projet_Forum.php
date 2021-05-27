@@ -83,6 +83,7 @@ htmlhead($title, $hrefStyle);
                             $data = (new TopicService())->displayTopic();
                             $dateCounterReponse = (new ReponseService())->counterReponse();
                             $counterReponse = 0;
+                            $lastActivities = "Aucune";
 
                             foreach ($data as $value) {
                                 $_SESSION['id'] = $value->getIdTopic();
@@ -92,7 +93,7 @@ htmlhead($title, $hrefStyle);
                                     <td class="colonne_sujet">
                                         <span class="nom_sujet"><a class="lien_sujet" href="Projet_Sujet.php?id=<?php echo $id ?>"><?php echo $value->getTitre() ?></a></span>
                                         <br>
-                                        <span class="nom_crea_date">Par nomCreateur le <?php $value->getDateAjout() ?></span>
+                                        <span class="nom_crea_date">Par nomCreateur le <?php echo $value->getDateAjout() ?></span>
                                     </td>
                                     <td class="forum_reponses">
                                         <?php
@@ -110,7 +111,20 @@ htmlhead($title, $hrefStyle);
                                     </td>
                                     <td class="forum_vues">1506</td>
                                     <td class="forum_notes">+48</td>
-                                    <td class="forum_activite">19 Mars 2021</td>
+                                    <td class="forum_activite">
+                                        <?php
+                                        foreach ($dateCounterReponse as $value) {
+                                            $id2 = $value->getIdTopic();
+                                            if ($id2 == $id) {
+                                                $lastActivities = $value->getDateAjout();
+                                                echo $lastActivities;
+                                            }
+                                        }
+                                        if ($lastActivities == 0) {
+                                            echo $lastActivities;
+                                        }
+                                        ?>
+                                    </td>
                                 </tr>
                             <?php
                             }
