@@ -23,7 +23,7 @@ htmlhead($title, $hrefStyle);
             <form action="script_connexion.php" method="post">
 
                 <div>
-                    <img class="profile" title="logo" src="user_pic.png" alt="user_picture" /></a>
+                    <img class="profile" title="logo" src="../Style/user_pic.png" alt="user_picture" /></a>
                 </div>
                 <div>
                     <input class="case" type="text" id="pseudo" name="user_login" placeholder="Pseudo" autofocus required>
