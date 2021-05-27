@@ -7,6 +7,8 @@ class Evenement
     private $dateFin;
     private $combattant1;
     private $combattant2;
+    private $imgMatch;
+
 
     /**
      * Get the value of id
@@ -124,6 +126,25 @@ class Evenement
     public function setCombattant2($combattant2)
     {
         $this->combattant2 = $combattant2;
+
+        return $this;
+    }
+    /**
+     * Get the value of imgMatch
+     */
+    public function getImgMatch()
+    {
+        return $this->imgMatch;
+    }
+
+    /**
+     * Set the value of imgMatch
+     *
+     * @return  self
+     */
+    public function setImgMatch($imgMatch)
+    {
+        $this->imgMatch = $imgMatch;
 
         return $this;
     }
