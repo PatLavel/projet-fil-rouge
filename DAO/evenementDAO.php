@@ -2,7 +2,7 @@
 include_once(__DIR__ . "/../DAO/CommonDAO.php");
 include_once(__DIR__ . "/../Model/Evenement.php");
 
-class EvenementDAO extends Common
+class EvenementDAO extends CommonDAO
 {
     public function GetFutureEvents()
     {

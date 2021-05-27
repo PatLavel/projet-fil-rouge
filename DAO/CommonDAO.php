@@ -1,4 +1,5 @@
-<?php class Common
+<?php 
+class CommonDAO
 {
     function common()
     {
@@ -6,4 +7,12 @@
         $bdd = new mysqli("localhost", "root", "", "nemelade");
         return $bdd;
     }
+
+    function connexionDatabase(): object
+    {
+        $bdd = new PDO("mysql:host=localhost;dbname=nemelade", "root", "");
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $bdd;
+    }
+
 }

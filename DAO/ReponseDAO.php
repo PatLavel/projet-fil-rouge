@@ -1,8 +1,9 @@
 <?php
 include_once("../Model/Reponse.php");
+include_once("../DAO/CommonDAO.php");
 require_once("../Exception/ReponseDAOException.php");
 
-class ReponseDAO
+class ReponseDAO extends CommonDAO
 {
 
     public function addReponse(Reponse $reponse): void
@@ -10,7 +11,7 @@ class ReponseDAO
         $message = $reponse->getMessage();
         $idTopic = $reponse->getIdTopic();
 
-        $bdd = new PDO("mysql:host=localhost;dbname=nemelade", "root", "");
+        $bdd = $this->connexionDatabase();
         $stmt = $bdd->prepare("INSERT INTO reponse (message, dateAjout, id_topic) VALUES (?, sysdate(), ?);");
         $stmt->bindParam(1, $message, PDO::PARAM_STR, 500);
         $stmt->bindParam(2, $idTopic, PDO::PARAM_INT, 11);
@@ -19,7 +20,7 @@ class ReponseDAO
 
     public function displayReponse(): array
     {
-        $bdd = new PDO("mysql:host=localhost;dbname=nemelade", "root", "");
+        $bdd = $this->connexionDatabase();
         $stmt = $bdd->prepare("SELECT id, message, DATE_FORMAT(dateAjout, '%d/%m/%Y à %H:%i:%s') as dateAjout, id_topic FROM reponse;");
         $stmt->execute();
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -37,8 +38,7 @@ class ReponseDAO
     public function counterReponse(): array
     {
         try {
-            $bdd = new PDO("mysql:host=localhost;dbname=nemelade", "root", "");
-            $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $bdd = $this->connexionDatabase();
             $stmt = $bdd->prepare("SELECT COUNT(*) as counterReponse, id_Topic FROM reponse GROUP BY id_topic;");
             $stmt->execute();
             $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
