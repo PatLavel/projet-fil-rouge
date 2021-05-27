@@ -1,7 +1,7 @@
 <?php
 include_once(__DIR__ . "/../view/CommonView.php");
 
-function displayArene($events, $datauser)
+function displayArene($events)
 {
 
 

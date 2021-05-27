@@ -12,4 +12,18 @@ class EvenementService
 
         return $data;
     }
+    public function GetSingleEvent($id)
+    {
+        $EvDAO = new EvenementDAO();
+        $data = $EvDAO->GetSingleEvent($id);
+
+        return $data;
+    }
+    public function GetPastEvents()
+    {
+        $EvDAO = new EvenementDAO();
+        $data = $EvDAO->GetPastEvents();
+
+        return $data;
+    }
 }
