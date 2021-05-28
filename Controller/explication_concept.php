@@ -20,7 +20,7 @@ htmlhead($title, $hrefStyle);
     ?>
 
     <div id="global">
-        <div><img class="city" title="illustration_ville" src="illustration_ville.jpg" alt="image_ville_medievale" /></div>
+        <div><img class="city" title="illustration_ville" src="../Style/illustration_ville.jpg" alt="image_ville_medievale" /></div>
         <h2 class="h2concept">Nemelade, qu'est-ce que c'est?</h2>
 
         <p class="pconcept">Nemelade est une ville fictive qui se trouve dans un univers de type médiéval fantastique. Les utilisateurs
@@ -53,7 +53,7 @@ htmlhead($title, $hrefStyle);
         <h2 class="h2concept">Mais ce dont la ville a surtout besoin, c'est de vous!</h2>
 
         <span class="CTAconcept"><button formaction="creation_compte.html" class="button">Rejoignez-nous!</button></span>
-        <div><img class="city" title="illustration_roi" src="king.jpg" alt="image_roi_trone" /></div>
+        <div><img class="city" title="illustration_roi" src="../Style/king.jpg" alt="image_roi_trone" /></div>
     </div>
     <?php
     htmlfooter();
