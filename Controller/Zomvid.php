@@ -16,7 +16,7 @@ include_once(__DIR__ . "/../view/CommonView.php");
         <?php
         htmlheader();
         ?>
-    <img src="/../style/zombie-warning-260nw-154781906.webp" alt="" class="container-fluid">
+    <img src="../style/zombie-warning-260nw-154781906.webp" alt="" class="container-fluid arena">
     <div class="container myp">
         <h1 class="text-center map">
             Zomvid : mesures grand public
