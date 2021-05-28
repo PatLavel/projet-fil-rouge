@@ -53,7 +53,7 @@ function htmlfooter(): void
             </div>
             <div class="middle">
                 <div>
-                    <span class="footer_link" href="../Controller/explication_concept.php">A propos</span>
+                    <a class="footer_link" href="../Controller/explication_concept.php">A propos</a>
                     <span class="footer_link">-</span>
                     <span class="footer_link">Mentions légales</span>
                     <span class="footer_link">-</span>
