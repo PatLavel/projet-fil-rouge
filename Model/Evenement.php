@@ -9,7 +9,6 @@ class Evenement
     private $combattant2;
     private $imgMatch;
 
-
     /**
      * Get the value of id
      */
