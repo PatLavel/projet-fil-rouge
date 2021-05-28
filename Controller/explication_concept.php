@@ -8,7 +8,7 @@ include_once(__DIR__ . "/../view/CommonView.php");
 
 <?php
 $title = "Arene";
-$hrefStyle = "../Style/Projet_Forum.css";
+$hrefStyle = "../Style/style.css";
 htmlhead($title, $hrefStyle);
 ?>
 
