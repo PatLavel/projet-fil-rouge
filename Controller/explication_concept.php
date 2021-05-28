@@ -52,7 +52,7 @@ htmlhead($title, $hrefStyle);
 
         <h2 class="h2concept">Mais ce dont la ville a surtout besoin, c'est de vous!</h2>
 
-        <span class="CTAconcept"><button formaction="creation_compte.html" class="button">Rejoignez-nous!</button></span>
+        <form><button formaction="../Controller/creation_compte.php" class="button">Rejoignez-nous!</button></form>
         <div><img class="city" title="illustration_roi" src="../Style/king.jpg" alt="image_roi_trone" /></div>
     </div>
     <?php
