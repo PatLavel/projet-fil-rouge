@@ -9,7 +9,7 @@ function displayContact()
 
     <?php
     $title = "Contact";
-    $hrefStyle = "../Style/Projet_Forum.css";
+    $hrefStyle = "../Style/contact.css";
     htmlhead($title, $hrefStyle);
     ?>
     <?php

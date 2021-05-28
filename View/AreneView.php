@@ -11,7 +11,7 @@ function displayArene($events)
 
     <?php
     $title = "Arene";
-    $hrefStyle = "../Style/style.css";
+    $hrefStyle = "../Style/Projet_Forum.css";
     htmlhead($title, $hrefStyle);
     ?>
     <?php

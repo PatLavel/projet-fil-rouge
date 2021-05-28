@@ -1,37 +1,22 @@
+<?php 
+
+include_once(__DIR__ . "/../view/CommonView.php");
+ ?>
+
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfoZomvid</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="zomvid.css">
-    <link rel="stylesheet" href="Header.css">
+    <?php
+    $title = "Parier";
+    $hrefStyle = "../Style/Projet_Forum.css";
+    htmlhead($title, $hrefStyle);
+    ?>
 
-</head>
-
-<body>
-    <header>
-        <div class="header">
-            <div class="h_left">
-                <a href="accueil.html"><img class="logo_nemelade" title="logo_blanc" src="logo_blanc.png" alt="logo_nemelade" /></a>
-            </div>
-            <div class="h_middle">
-                <a href="Projet_Forum.php" class="HeadText1">Forum</a>
-                <a href="Zomvid.html" class="HeadText2">Actualités</a>
-                <a href="Arene.html" class="HeadText3">Arène</a>
-            </div>
-            <div class="h_right1">
-                <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="user_pic.png" alt="logo_nemelade" /></a>
-            </div>
-            <div class="h_right2"><a href="Connexion.html" class="lien_co">Connexion</a><br><a href="creation_compte.html" class="lien_insc">Inscription</a>
-            </div>
-        </div>
-    </header>
-    <img src="zombie-warning-260nw-154781906.webp" alt="BRAINS" class="container-fluid">
+    <body>
+        <?php
+        htmlheader();
+        ?>
+    <img src="/../style/zombie-warning-260nw-154781906.webp" alt="" class="container-fluid">
     <div class="container myp">
         <h1 class="text-center map">
             Zomvid : mesures grand public
@@ -88,32 +73,9 @@
         On reste chez soi si on est mort<br>
         On Brule les corps<br>
     </div><br>
-    <footer>
-        <div class="footer">
-            <div class="left">
-                <img class="logo_footer" title="logo_blanc" src="lo go_blanc.PNG" alt="logo_nemelade" />
-            </div>
-            <div class="middle">
-                <div>
-                    <span class="footer_link">A propos</span>
-                    <span class="footer_link">-</span>
-                    <span class="footer_link">Mentions légales</span>
-                    <span class="footer_link">-</span>
-                    <a class="footer_contact" href="contact.html">Contact</a>
-
-                </div>
-                <div>
-                    <p>Copyright ©2021 Nemelade Inc. Tous droits réservés.</p>
-                </div>
-            </div>
-            <div class="right">
-                <img class="logo_social" title="logo_twitter" src="logo_twitter.PNG" alt="logo_twitter" />
-                <img class="logo_social" title="logo_facebook" src="logo_facebook.PNG" alt="logo_facebook" />
-                <img class="logo_social" title="logo_discord" src="logo_discord.PNG" alt="logo_discord" />
-                <img class="logo_social" title="logo_whatsapp" src="logo_whatsapp.PNG" alt="logo_whatsapp" />
-            </div>
-        </div>
-    </footer>
+    <?php
+        htmlfooter();
+        ?>
 
 </body>
 
