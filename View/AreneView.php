@@ -48,7 +48,7 @@ function displayArene($events)
                             <p><?php echo $events[$i]->getDateDebut(); ?>: <?php echo $events[$i]->getCombattant1(); ?> VS <?php echo $events[$i]->getCombattant2(); ?></p>
                         </div>
                         <?php $idMatch = $events[$i]->getId();
-                        var_dump($idMatch) ?>
+                        ?>
                         <div><?php echo "<a class='button' href='form_reservation_combat.php?id=$idMatch'>Réserver</a>"; ?></div>
                         <div><?php echo "<a class='button' href='Pari_evenement.php?id=$idMatch'>Parier</a>"; ?></div>
                     </div>
