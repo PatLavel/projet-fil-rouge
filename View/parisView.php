@@ -20,15 +20,15 @@ function displayParis($event)
         htmlheader();
         ?>
 
-        <div class="container-fluid">
+        <div class="container-fluid container col-md-8 myp">
             <h2 class="versus"><?php echo $event->getLibelle(); ?></h2>
 
             <div>
                 <p><?php echo $event->getDateDebut(); ?>: <?php echo $event->getCombattant1(); ?> VS <?php echo $event->getCombattant2(); ?></p>
             </div>
-            <form action="script_paris.php" method="POST">
-                <div>votre mise: <input class="form-control" type="number" name="mise"></div>
-                <div><input type="submit" class="button" value="Miser"> </div>
+            <form  action="script_paris.php" method="POST">
+                <div >votre mise: <input class="form-control" type="number" name="mise"></div>
+                <div ><input type="submit" class="button" value="Miser"> </div>
             </form>
         </div>
 
