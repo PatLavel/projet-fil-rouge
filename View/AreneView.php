@@ -11,7 +11,7 @@ function displayArene($events)
 
     <?php
     $title = "Arene";
-    $hrefStyle = "../Style/style.css";
+    $hrefStyle = "../Style/Projet_Forum.css";
     htmlhead($title, $hrefStyle);
     ?>
     <?php
@@ -20,7 +20,7 @@ function displayArene($events)
 
     <body>
 
-        <div class="arena_content">
+        <div class="arena_content container myp">
 
             <div><img class="arena" title="arena" src="/style/Arena.png" alt="image_arene" />
                 <div>
@@ -54,14 +54,12 @@ function displayArene($events)
                     </div>
 
 
-
-                <?php
-            }
-                ?>
-
-
                 </div>
+            <?php
+            }
+            ?>
 
+        </div>
 
     </body>
     <?php
