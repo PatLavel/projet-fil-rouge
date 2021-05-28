@@ -11,7 +11,7 @@ function displayParis($event)
 
     <?php
     $title = "Parier";
-    $hrefStyle = "../Style/Projet_Forum.css";
+    $hrefStyle = "../Style/style.css";
     htmlhead($title, $hrefStyle);
     ?>
 

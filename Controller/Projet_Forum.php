@@ -8,7 +8,7 @@ include_once("../View/CommonView.php");
 
 session_start();
 $title = "Forums - Nemelade";
-$hrefStyle = "../Style/Projet_Forum.css";
+$hrefStyle = "../Style/style.css";
 htmlhead($title, $hrefStyle);
 ?>
 

@@ -9,7 +9,7 @@ function displayTopicCreation()
 
     <?php
     $title = "Création de Sujet - Nemelade";
-    $hrefStyle = "../Style/Projet_Forum.css";
+    $hrefStyle = "../Style/style.css";
     htmlhead($title, $hrefStyle);
     ?>
 

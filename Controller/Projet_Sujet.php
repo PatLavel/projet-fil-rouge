@@ -9,7 +9,7 @@ include_once("../View/CommonView.php");
 require_once("../Exception/ReponseServiceException.php");
 
 $title = "Sujet - Nemelade";
-$hrefStyle = "../Style/Projet_Forum.css";
+$hrefStyle = "../Style/style.css";
 htmlhead($title, $hrefStyle);
 ?>
 
