@@ -14,23 +14,10 @@ htmlhead($title, $hrefStyle);
 
 <body>
 
-    <header>
-        <div class="header">
-            <div class="h_left">
-                <a href="accueil.html"><img class="logo_nemelade" title="logo_blanc" src="logo_blanc.png" alt="logo_nemelade" /></a>
-            </div>
-            <div class="h_middle">
-                <a href="Projet_Forum.php" class="HeadText1">Forum</a>
-                <a href="Zomvid.html" class="HeadText2">Actualités</a>
-                <a href="Arene.html" class="HeadText3">Arène</a>
-            </div>
-            <div class="h_right1">
-                <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="user_pic.png" alt="logo_nemelade" /></a>
-            </div>
-            <div class="h_right2"><a href="Connexion.html" class="lien_co">Connexion</a><br><a href="creation_compte.html" class="lien_insc">Inscription</a>
-            </div>
-        </div>
-    </header>
+    <?php
+    htmlheader();
+
+    ?>
 
     <div id="global">
         <div><img class="city" title="illustration_ville" src="illustration_ville.jpg" alt="image_ville_medievale" /></div>
