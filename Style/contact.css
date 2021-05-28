@@ -1,11 +1,13 @@
 .myp {
     color: #8f8f8f;
-  }
+}
+
 .map {
     color: #8f8f8f;
     font-weight: bold;
-  }
-.mop{
+}
+
+.mop {
     width: 300px;
     height: 40px;
     border: none;
@@ -15,28 +17,32 @@
     background-color: #aab4a1;
     font-size: 1.3em;
 }
-.container{
+
+.container {
     padding-bottom: 2%;
     padding-top: 2%;
 }
-.row{
+
+.row {
     padding-bottom: 10px;
 }
 
-header{
+header {
     background-color: #C8BEAE;
     padding-bottom: 20px;
 }
 
-footer{
+footer {
     background-color: #485154;
     padding-bottom: 20px;
 }
 
-body{
+body {
     background-color: #ffffff;
 }
-/*-----header-----*/
+
+
+/*-----header-----
 .header{
     display: flex;
     justify-content: space-around;
@@ -119,25 +125,28 @@ body{
 }
 .lien_insc:hover {
     font-size: 22px;
-}
+}*/
+
+
 /*-----footer-----*/
+
 .footer {
     display: flex;
     justify-content: space-around;
     background-color: #485154;
     margin: 0;
     padding: 10px;
-  
     position: relative;
     bottom: 0;
     width: 100%;
-
     margin-top: 30px;
-  }
-  .left {
+}
+
+.left {
     margin: none;
-  }
-  .middle {
+}
+
+.middle {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,33 +154,35 @@ body{
     color: white;
     font-size: 12px;
     margin-right: 200px;
-  }
-  
-  .footer_link {
+}
+
+.footer_link {
     margin-left: 5px;
     margin-right: 5px;
-  }
-  
-  .right {
+}
+
+.right {
     display: flex;
     margin-top: 10px;
-  }
-  
-  .logo_social {
+}
+
+.logo_social {
     margin-right: 20px;
     width: 40px;
     height: 40px;
-  }
-  
-  .logo_footer {
+}
+
+.logo_footer {
     width: 50%;
     height: auto;
-  }
-  .footer_contact {
-      color: white;
-      font-size: 12px;
-  }
-  .footer_contact:hover {
+}
+
+.footer_contact {
+    color: white;
+    font-size: 12px;
+}
+
+.footer_contact:hover {
     color: white;
     font-size: 12px;
     text-decoration: underline;

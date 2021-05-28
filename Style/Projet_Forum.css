@@ -179,14 +179,15 @@ tr {
 }
 
 .button_creer {
-    background-color: #dc3545;
+    background-color: #d80053;
+    font-weight: bold;
     letter-spacing: 0.1rem;
     border-radius: 50rem;
     margin-left: 90%;
 }
 
 .button_creer:hover {
-    color: black;
+    color: white;
 }
 
 
@@ -352,6 +353,8 @@ hr {
 }
 
 .lien_co {
+    display: flex;
+    justify-content: center;
     color: white;
     text-decoration: none;
     font-size: 20px;

@@ -1,4 +1,4 @@
-/*-----header-----*/
+/*-----header-----
 .header{
     display: flex;
     justify-content: space-around;
@@ -78,4 +78,4 @@
 }
 .lien_insc:hover {
     font-size: 22px;
-}
+}*/
