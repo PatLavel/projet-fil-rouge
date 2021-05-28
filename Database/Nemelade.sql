@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 27 mai 2021 à 16:04
+-- Généré le : ven. 28 mai 2021 à 14:07
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 7.4.15
 
@@ -47,33 +47,19 @@ CREATE TABLE `evenement` (
   `dateDebut` date NOT NULL,
   `dateFin` date NOT NULL,
   `combattant1` varchar(50) NOT NULL,
-  `combattant2` varchar(50) NOT NULL
+  `combattant2` varchar(50) NOT NULL,
+  `img` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `evenement`
 --
 
-INSERT INTO `evenement` (`id`, `libelle`, `dateDebut`, `dateFin`, `combattant1`, `combattant2`) VALUES
-(1, 'STARATEGOS AFFRONTE WEREWOLF', '2021-07-02', '2021-07-02', 'STARATEGOS', 'WEREWOLF'),
-(2, 'GORILLA AFFRONTE DEATHBRINGER', '2021-07-10', '2021-07-10', 'GORILLA', 'DEATHBRINGER'),
-(3, 'GORILLA AFFRONTE DEATHBRINGER', '2021-07-10', '2021-07-10', 'GORILLA', 'DEATHBRINGER'),
-(4, 'DEMON\'S KATANA AFFRONTE REVOLVER', '2021-07-17', '2021-07-17', 'DEMON\'S KATANA', 'REVOLVER');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `liaison_reponse`
---
-
-CREATE TABLE `liaison_reponse` (
-  `id` int(11) NOT NULL,
-  `message` varchar(5000) NOT NULL,
-  `dateAjout` datetime NOT NULL,
-  `jaime` int(11) DEFAULT NULL,
-  `jaimepas` int(11) DEFAULT NULL,
-  `id_Reponse` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `evenement` (`id`, `libelle`, `dateDebut`, `dateFin`, `combattant1`, `combattant2`, `img`) VALUES
+(1, 'STARATEGOS AFFRONTE WEREWOLF', '2021-07-02', '2021-07-02', 'STARATEGOS', 'WEREWOLF', NULL),
+(2, 'GORILLA AFFRONTE DEATHBRINGER', '2021-07-10', '2021-07-10', 'GORILLA', 'DEATHBRINGER', NULL),
+(3, 'GORILLA AFFRONTE DEATHBRINGER', '2021-07-10', '2021-07-10', 'GORILLA', 'DEATHBRINGER', NULL),
+(4, 'DEMON\'S KATANA AFFRONTE REVOLVER', '2021-07-17', '2021-07-17', 'DEMON\'S KATANA', 'REVOLVER', 'vs1.png');
 
 -- --------------------------------------------------------
 
@@ -104,7 +90,8 @@ INSERT INTO `reponse` (`id`, `message`, `dateAjout`, `jaime`, `jaimepas`, `id_to
 (7, 'dernier message pour essayer le fonctionnement des réponses (lié au 2eme topic)', '2021-05-21 13:55:25', NULL, NULL, 2),
 (8, 'message nombre de rep', '2021-05-26 14:12:46', NULL, NULL, 2),
 (9, '.....', '2021-05-26 14:13:35', NULL, NULL, 2),
-(10, 'knlkncùsdcsd', '2021-05-27 15:47:28', NULL, NULL, 7);
+(10, 'knlkncùsdcsd', '2021-05-27 15:47:28', NULL, NULL, 7),
+(11, 'test', '2021-05-27 21:56:50', NULL, NULL, 3);
 
 -- --------------------------------------------------------
 
@@ -122,6 +109,32 @@ CREATE TABLE `reservation` (
   `id_utilisateur` int(11) NOT NULL,
   `id_evenement` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `sous_reponse`
+--
+
+CREATE TABLE `sous_reponse` (
+  `id` int(11) NOT NULL,
+  `message` varchar(5000) NOT NULL,
+  `dateAjout` datetime NOT NULL,
+  `jaime` int(11) DEFAULT NULL,
+  `jaimepas` int(11) DEFAULT NULL,
+  `id_reponse` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `sous_reponse`
+--
+
+INSERT INTO `sous_reponse` (`id`, `message`, `dateAjout`, `jaime`, `jaimepas`, `id_reponse`) VALUES
+(1, 'test 1ere reponse', '2021-05-27 22:00:14', NULL, NULL, 4),
+(2, '2eme test sous reponse', '2021-05-27 22:01:49', NULL, NULL, 6),
+(3, '3eme test sous rep', '2021-05-27 22:03:15', NULL, NULL, 6),
+(4, 'encore un test', '2021-05-27 22:14:13', NULL, NULL, 5),
+(5, 'voici une sous réponse', '2021-05-27 22:32:19', NULL, NULL, 4);
 
 -- --------------------------------------------------------
 
@@ -150,7 +163,8 @@ INSERT INTO `topic` (`id`, `titre`, `message`, `dateAjout`, `jaime`, `jaimepas`,
 (4, '4eme Topic', 'message test', '2021-05-19 14:40:05', NULL, NULL, NULL),
 (5, 'Titre pour fonctionnalité d\'affichage', 'Blablabla Blablabla Blablabla Blablabla BlablablaBlablablaBlablabla Blablabla BlablablaBlablablaBlablabla Blablabla Blablabla BlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablavBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlablablaBlab', '2021-05-20 17:36:14', NULL, NULL, NULL),
 (6, 'D\'où vient-il?', 'Contrairement à une opinion répandue, le Lorem Ipsum n\'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s\'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d\'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum', '2021-05-20 18:01:27', NULL, NULL, NULL),
-(7, 'zeezetzeet', 'dlsdùv,sldmd,vs', '2021-05-27 15:46:44', NULL, NULL, NULL);
+(7, 'azerty', 'azertyuiop', '2021-05-27 15:46:44', NULL, NULL, NULL),
+(8, 'Un nouveau sujet', 'un nouveau message', '2021-05-27 22:35:25', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -200,12 +214,6 @@ ALTER TABLE `evenement`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `liaison_reponse`
---
-ALTER TABLE `liaison_reponse`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Index pour la table `reponse`
 --
 ALTER TABLE `reponse`
@@ -219,6 +227,13 @@ ALTER TABLE `reservation`
   ADD PRIMARY KEY (`id`),
   ADD KEY `reservation_utilisateur_FK` (`id_utilisateur`),
   ADD KEY `reservation_evenement0_FK` (`id_evenement`);
+
+--
+-- Index pour la table `sous_reponse`
+--
+ALTER TABLE `sous_reponse`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sous_reponse_reponse_FK` (`id_reponse`);
 
 --
 -- Index pour la table `topic`
@@ -254,7 +269,7 @@ ALTER TABLE `evenement`
 -- AUTO_INCREMENT pour la table `reponse`
 --
 ALTER TABLE `reponse`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `reservation`
@@ -263,10 +278,16 @@ ALTER TABLE `reservation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT pour la table `sous_reponse`
+--
+ALTER TABLE `sous_reponse`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT pour la table `topic`
 --
 ALTER TABLE `topic`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
