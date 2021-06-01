@@ -66,7 +66,7 @@ htmlhead($title, $hrefStyle);
                 <div class="rounded block_suj">
                     <div class="block_sujet">
                         <div class="rounded bar_title_suj">
-                            <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
+                            <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
                             <div class="suj_title_nom">
                                 <h3 class="suj_title_nom"><?php echo $titre ?></h3>
                                 <p class="suj_title_nom">Par nomCreateur le <?php echo $dateAjout ?></p>
@@ -154,7 +154,7 @@ htmlhead($title, $hrefStyle);
                         ?>
                                 <div class="sujet_rep">
                                     <div class="rounded bar_title_rep">
-                                        <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
+                                        <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
                                         <div class="suj_title_nom">
                                             <p class="suj_title_nom">Par nomCreateur le <?php echo $value->getDateAjout() ?></p>
                                         </div>
@@ -213,7 +213,7 @@ htmlhead($title, $hrefStyle);
                                 ?>
                                         <div class="sujet_rep_rep">
                                             <div class="rounded bar_title_rep">
-                                                <a href="modification_compte.html"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
+                                                <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
                                                 <div class="suj_title_nom">
                                                     <p class="suj_title_nom">Par nomCreateur le 15 Mars 2021 - 15:34:59</p>
                                                 </div>

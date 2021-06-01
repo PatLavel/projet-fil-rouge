@@ -18,7 +18,7 @@ session_start();
 
     <?php
     if (!isset($_SESSION['login'])) {
-        header('Location: Connexion.html');
+        header('Location: Connexion.php');
     }
     logOut();
 
@@ -31,7 +31,7 @@ session_start();
 
     echo "<div class='fail_connexion'>
                 <div><p>Vous vous êtes déconnecté avec succès.</p></div>
-                <div><a class='btn btn-dark btn-sm' href='Connexion.html'>Retour</a></div>
+                <div><a class='btn btn-dark btn-sm' href='Connexion.php'>Retour</a></div>
                 </div>";
     ?>
 </body>

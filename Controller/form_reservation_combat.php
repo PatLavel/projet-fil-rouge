@@ -16,7 +16,7 @@ htmlhead($title, $hrefStyle);
 <body>
     <?php
     if (!isset($_SESSION['user_login'])) {
-        header('Location: Connexion.html');
+        header('Location: Connexion.php');
     }
     ?>
 

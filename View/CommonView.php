@@ -30,11 +30,24 @@ function htmlheader(): void
                 <a href="../Controller/arene.php" class="HeadText">Arène</a>
             </div>
             <div class="h_right1">
-                <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
-                <div class="h_right2">
-                    <a href="../Controller/Connexion.php" class="lien_co">Connexion</a>
-                    <a href="../Controller/creation_compte.php" class="lien_insc">Inscription</a>
-                </div>
+                <?php if (!isset($_SESSION['user_login'])) {    ?>
+                    <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
+                    <div class="h_right2">
+                        <a href="../Controller/Connexion.php" class="lien_co">Connexion</a>
+                        <a href="../Controller/creation_compte.php" class="lien_insc">Inscription</a>
+                    </div>
+
+                <?php   } else {   
+                    //var_dump($_SESSION); 
+                       ?>
+                    <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
+                    <div class="h_right2">
+                        <div class="lien_insc"><?php echo $_SESSION['User']; ?></div>
+                        <a href="../Controller/script_deconnexion.php" class="lien_insc">Deconnection</a>
+                    </div>
+
+                <?php     }    ?>
+
             </div>
         </div>
     </header>
@@ -64,10 +77,10 @@ function htmlfooter(): void
                 </div>
             </div>
             <div class="right">
-                <img class="logo_social" title="logo_twitter" src="../Style/logo_twitter.PNG" alt="logo_twitter" />
-                <img class="logo_social" title="logo_facebook" src="../Style/logo_facebook.PNG" alt="logo_facebook" />
-                <img class="logo_social" title="logo_discord" src="../Style/logo_discord.PNG" alt="logo_discord" />
-                <img class="logo_social" title="logo_whatsapp" src="../Style/logo_whatsapp.PNG" alt="logo_whatsapp" />
+                <a href="https://twitter.com/Kaamelott_tweet"><img class="logo_social" title="logo_twitter" src="../Style/logo_twitter.PNG" alt="logo_twitter" /></a>
+                <a href="https://fr-fr.facebook.com/LesMurmuresDuDonjon"><img class="logo_social" title="logo_facebook" src="../Style/logo_facebook.PNG" alt="logo_facebook" /></a>
+                <a href="https://discord.gg/yVmCy5js"><img class="logo_social" title="logo_discord" src="../Style/logo_discord.PNG" alt="logo_discord" /></a>
+                <a href="https://warhammerfantasy.fandom.com/wiki/Warhammer_Wiki"><img class="logo_social" title="logo_whatsapp" src="../Style/logo_whatsapp.PNG" alt="logo_whatsapp" /></a>
             </div>
         </div>
     </footer>
