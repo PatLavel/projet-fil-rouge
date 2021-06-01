@@ -42,7 +42,7 @@ function htmlheader(): void
                        ?>
                     <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
                     <div class="h_right2">
-                        <div class="lien_insc"><?php echo $_SESSION['User']; ?></div>
+                        <div class="lien_insc"><?php echo $_SESSION['user_login']; ?></div>
                         <a href="../Controller/script_deconnexion.php" class="lien_insc">Deconnection</a>
                     </div>
 
