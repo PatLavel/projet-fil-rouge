@@ -21,14 +21,11 @@
         if (password_verify($_POST['user_password'], $tab['hash'])) {
             session_start();
             $_SESSION['user_login'] = $_POST['user_login'];
-            echo "<div class='status_connexion'>
-            <div><p>Vous vous êtes connectés avec succès</p></div>
-            <div><a class='btn btn-dark btn-sm' href='modification_compte.php'>Super !</a></div>
-            </div>";
+            header('Location:arene.php');
         } else {
             echo "<div class='status_connexion'>
                 <div><p>Informations invalides</p></div>
-                <div><a class='btn btn-dark btn-sm' href='Connexion.html'>Retour</a></div>
+                <div><a class='btn btn-dark btn-sm' href='Connexion.php'>Retour</a></div>
                 </div>";
         }
     }

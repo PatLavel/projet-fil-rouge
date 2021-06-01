@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -6,16 +10,16 @@
     <meta charset="utf-8" />
     <title>Nemelade : inscription</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Style/style.css"/>
+    <link rel="stylesheet" href="../Style/style.css" />
 
 </head>
 
 <body>
     <?php
 
-    // if (!isset($_SESSION['email'])) {
-    //     header('Location: form_connexion.php');
-    // }
+    if (!isset($_SESSION['email'])) {
+        header('Location:Connexion.php');
+    }
     $hash = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
 
     Ajout_utilisateur($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['login'], $_POST['user_password'], $hash);
@@ -30,10 +34,7 @@
         $mysqli->close();
     }
 
-    echo "<div class='insert_account'>
-                <div><p>Votre compte a été créé avec succès.</p></div>
-                <div><a class='btn btn-dark btn-sm' href='Connexion.php'>valider</a></div>
-                </div>";
+
 
     ?>
 </body>
