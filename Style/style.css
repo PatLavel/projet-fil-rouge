@@ -1,18 +1,67 @@
-.versus {
-  margin-top: 80px;
-  margin-top: 80px;
-  font-size: 45px;
-  font-weight: bolder;
+/* page arene */
+
+.arena_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .arena {
-  width: 1000px;
+  display: flex;
+  justify-content: center;
+  width: 75rem;
   height: auto;
+  margin-bottom: 20px;
+}
+
+/* page explication concept */
+
+.concept {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.h2concept {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  color: #8f8f8f;
+}
+
+#global {
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+}
+
+.CTAconcept {
+  display: block;
+  align-content: center;
+  height: 50 px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: #aab4a1 5px solid;
+  color: white;
+  font-weight: bold;
+  background-color: #aab4a1;
+  font-size: 1.3em;
+  text-decoration: none;
 }
 
 .city {
-  width: 1000px;
+  display: flex;
+  width: 700px;
   height: auto;
+  margin-bottom: 20px;
+}
+
+.versus {
+  margin-top: 80px;
+  font-size: 45px;
+  font-weight: bolder;
 }
 
 .global {
