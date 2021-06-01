@@ -39,6 +39,8 @@ function displayArene($events)
 
             ?>
                 <div>
+                    </br>
+                    </br>
                     <h2 class="versus"><?php echo $events[$i]->getLibelle(); ?></h2>
 
                     <div><img class="arena" title="vs2" src="../Style/<?php echo $events[$i]->getImgMatch(); ?>" alt="image_versus_2" /></div>
@@ -49,8 +51,9 @@ function displayArene($events)
                         </div>
                         <?php $idMatch = $events[$i]->getId();
                         ?>
-                        <div><?php echo "<a class='button' href='form_reservation_combat.php?id=$idMatch'>Réserver</a>"; ?></div>
-                        <div><?php echo "<a class='button' href='Pari_evenement.php?id=$idMatch'>Parier</a>"; ?></div>
+                        <?php echo "<a class='button' href='form_reservation_combat.php?id=$idMatch'>Réserver</a>"; ?>
+                        <?php echo "<a class='button' href='Pari_evenement.php?id=$idMatch'>Parier</a>"; ?>
+
                     </div>
 
 
