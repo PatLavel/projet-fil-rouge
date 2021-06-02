@@ -218,6 +218,7 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
@@ -226,6 +227,10 @@ body {
   background-image: url(img_back.png);
   background-repeat: repeat;
   color: #000000cc;
+  min-height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 20px;
 }
 
 .bar_title_forum {
@@ -599,7 +604,7 @@ hr {
   background-color: #485154;
   margin: 0;
   padding: 10px;
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   margin-top: 30px;
