@@ -57,10 +57,11 @@ htmlhead($title, $hrefStyle);
     </div>
 
 
-    <div class="bottom">
 
-        <?php
-        htmlfooter();
-        ?>
+    <?php
+    htmlfooter();
+    ?>
+
+</body>
 
 </html>
