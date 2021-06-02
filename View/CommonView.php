@@ -58,6 +58,7 @@ function htmlheader(): void
 
 function htmlfooter(): void
 {
+    //phpinfo();
 ?>
     <footer>
         <div class="footer">
@@ -77,10 +78,10 @@ function htmlfooter(): void
                 </div>
             </div>
             <div class="right">
-                <a href="https://twitter.com/Kaamelott_tweet"><img class="logo_social" title="logo_twitter" src="../Style/logo_twitter.PNG" alt="logo_twitter" /></a>
-                <a href="https://fr-fr.facebook.com/LesMurmuresDuDonjon"><img class="logo_social" title="logo_facebook" src="../Style/logo_facebook.PNG" alt="logo_facebook" /></a>
-                <a href="https://discord.gg/yVmCy5js"><img class="logo_social" title="logo_discord" src="../Style/logo_discord.PNG" alt="logo_discord" /></a>
-                <a href="https://warhammerfantasy.fandom.com/wiki/Warhammer_Wiki"><img class="logo_social" title="logo_whatsapp" src="../Style/logo_whatsapp.PNG" alt="logo_whatsapp" /></a>
+                <a target="_blank" href="https://twitter.com/Kaamelott_tweet"><img class="logo_social" title="logo_twitter" src="../Style/logo_twitter.PNG" alt="logo_twitter" /></a>
+                <a target="_blank"  href="https://fr-fr.facebook.com/LesMurmuresDuDonjon"><img class="logo_social" title="logo_facebook" src="../Style/logo_facebook.PNG" alt="logo_facebook" /></a>
+                <a target="_blank"  href="https://discord.gg/yVmCy5js"><img class="logo_social" title="logo_discord" src="../Style/logo_discord.PNG" alt="logo_discord" /></a>
+                <a target="_blank"  href="https://warhammerfantasy.fandom.com/wiki/Warhammer_Wiki"><img class="logo_social" title="logo_whatsapp" src="../Style/logo_whatsapp.PNG" alt="logo_whatsapp" /></a>
             </div>
         </div>
     </footer>

@@ -56,6 +56,10 @@ htmlhead($title, $hrefStyle);
     </div>
 
 
+<<<<<<< HEAD
+=======
+    <div class="bottom"></div>
+>>>>>>> 8c7d9fd (divers)
 
     <?php
     htmlfooter();
