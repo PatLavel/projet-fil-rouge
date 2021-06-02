@@ -32,7 +32,7 @@ htmlhead($title, $hrefStyle);
                     <input class="case" type="password" id="password" name="user_password" placeholder="Mot de passe" required>
                 </div>
                 <button formaction="script_connexion.php" class="button">Se connecter</button>
-                <p class="password_lost">Mot de passe oublié?</p>
+                <!-- <p class="password_lost">Mot de passe oublié?</p> -->
             </form>
         </div>
         <div class="separation">
