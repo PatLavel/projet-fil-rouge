@@ -1,10 +1,19 @@
-<!doctype html>
-<html lang="fr">
+<?php
+
+function displayActu()
+{
+
+
+?>
+  <!doctype html>
+  <html lang="fr">
+
   <head>
     <meta charset="utf-8">
     <title>Page d'accueil </title>
     <link rel="stylesheet" href="../style/style3.css">
   </head>
+
   <body>
     <div class="container-grille">
       <header>
@@ -50,7 +59,7 @@
           </div>
         </div>
 
-      </div>   
+      </div>
       <div id=quatrième-partie>
         <br>
         <br>
@@ -66,7 +75,7 @@
             <span>Combat Arène #2</span>
           </div>
         </div>
-        
+
       </div>
       <footer>
         <div class="left">
@@ -92,13 +101,13 @@
         </div>
       </footer>
       <img id=imageville src="../style/ville.jpg" alt="Impossible de charger l'image" width=725 height=500>
-      <div id=forme_verte> 
-        <br> 
-        <br> 
+      <div id=forme_verte>
+        <br>
+        <br>
         <p>
           <br>
           <br>
-          Bienvenue au sein de la bourgade NEMELADE!  <br>
+          Bienvenue au sein de la bourgade NEMELADE! <br>
           Ici vous trouverez sur ce site l'ensemble des informations <br>
           dont vous avez besoin: <br>
           - Les actualités en vogue.<br>
@@ -113,6 +122,9 @@
 
         </p>
       </div>
-    </div> 
+    </div>
   </body>
-</html>
+
+  </html>
+
+<?php } ?>

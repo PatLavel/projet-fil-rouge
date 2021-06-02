@@ -21,10 +21,10 @@ function htmlheader(): void
     <header>
         <div class="header">
             <div class="h_left">
-                <a href=""><img class="logo_nemelade" src="../Style/logo_blanc.png" alt="logo_nemelade" /></a>
+                <a href="../Controller/accueil.php"><img class="logo_nemelade" src="../Style/logo_blanc.png" alt="logo_nemelade" /></a>
             </div>
             <div class="h_middle">
-                <a href="" class="HeadText">Accueil</a>
+                <a href="../Controller/accueil.php" class="HeadText">Accueil</a>
                 <a href="../Controller/Projet_Forum.php" class="HeadText">Forum</a>
                 <a href="../Controller/Zomvid.php" class="HeadText">Actualités</a>
                 <a href="../Controller/arene.php" class="HeadText">Arène</a>
@@ -37,9 +37,9 @@ function htmlheader(): void
                         <a href="../Controller/creation_compte.php" class="lien_insc">Inscription</a>
                     </div>
 
-                <?php   } else {   
+                <?php   } else {
                     //var_dump($_SESSION); 
-                       ?>
+                ?>
                     <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
                     <div class="h_right2">
                         <div class="lien_insc"><?php echo $_SESSION['user_login']; ?></div>
@@ -63,7 +63,7 @@ function htmlfooter(): void
     <footer>
         <div class="footer">
             <div class="left">
-                <img class="logo_footer" title="logo_blanc" src="../Style/logo_blanc.PNG" alt="logo_nemelade" />
+                <a href="../Controller/accueil.php"><img class="logo_footer" title="logo_blanc" src="../Style/logo_blanc.PNG" alt="logo_nemelade" /> </a>
             </div>
             <div class="middle">
                 <div>
