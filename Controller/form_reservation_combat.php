@@ -1,6 +1,9 @@
 <?php
 session_start();
 include_once(__DIR__ . "/../view/CommonView.php");
+include_once(__DIR__ . "/../service/evenementService.php");
+include_once(__DIR__ . "/../service/UtilisateurService.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -29,27 +32,15 @@ htmlhead($title, $hrefStyle);
     <h2 class="myh2">Assistez à un des combats de l'arène!</h2>
 
     <?php
-    $result = userEarnedMoney($_SESSION['user_login']);
+    $userMoney = new UtilisateurService();
 
-    function userEarnedMoney($login)
-    {
-
-        $mysqli = new mysqli('127.0.0.1', 'root', '', 'nemelade');
-        $stmt = $mysqli->prepare("SELECT round(argent) FROM utilisateur WHERE login=?;");
-        $stmt->bind_param("s", $login);
-        $stmt->execute();
-        $rs = $stmt->get_result();
-        $tab = $rs->fetch_array(MYSQLI_ASSOC);
-        $rs->free();
-        $mysqli->close();
-        return $tab;
-    }
+    $result = $userMoney->SelectArgent($_SESSION['user_login']);
     ?>
 
     <div class="reservation">
         <div class="subscription">
             <div class="subscription_form">
-                <p class="myp">Vous disposez actuellement de <?php echo $result['round(argent)'] ?> PO.</p>
+                <p class="myp">Vous disposez actuellement de <?php echo round($result) ?> PO.</p>
                 <p class="myp">Êtes vous certain de vouloir dépenser 10 PO pour assister à ce match?</p>
                 <div class="validation">
                 </div>

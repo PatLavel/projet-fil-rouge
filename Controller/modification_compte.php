@@ -1,6 +1,9 @@
 <?php
 session_start();
 include_once(__DIR__ . "/../view/CommonView.php");
+include_once(__DIR__ . "/../service/evenementService.php");
+include_once(__DIR__ . "/../service/UtilisateurService.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -21,28 +24,24 @@ htmlhead($title, $hrefStyle);
     <?php
     htmlheader();
 
+    $userMoney = new UtilisateurService();
+
+    $result = $userMoney->SelectArgent($_SESSION['user_login']);
     ?>
 
-    <h1 class="myh1">Bienvenue chez vous.</h1>
-    <h2 class="myh2">Vous pouvez modifier vos informations personnelles. </h2>
-
     <div class="subscription">
-        <div class="picture">
-            <img class="profile_pic" title="user_profile_pic" src="../Style/user_pic.png" alt="user_profile_pic" />
-            <input type="submit" class="button2" value="Modifier photo">
-        </div>
         <div class="subscription_form">
+            <div>
+                <h1 class="myh1">Bienvenue chez vous.</h1>
+                <p class="myp">Votre solde est de <?php echo round($result) ?> PO.
+                <p></br>
+                <h2 class="myh2">Vous pouvez modifier vos informations personnelles. </h2>
+            </div>
             <form method="POST">
-                <p class="myp">Entrez votre nouvelle adresse email. Vous recevrez un email de confirmation sur votre
-                    nouvelle adresse.</p>
-                <input class="case" type="email" name="email" placeholder="Nouvelle adresse email">
-                <input class="case" type="email" name="confirm_email" placeholder="Confirmer nouvelle adresse email">
-                <p class="myp">Vous pouvez changer de pseudo mais attention, les autres citoyens pourraient ne pas vous
-                    reconnaitre!</p>
-                <input class="case" type="text" name="pseudo" placeholder="Nouveau pseudo">
+                <p class="myp">Modifiez votre adresse email.</p>
+                <input class="case" type="email" name="confirm_email" placeholder="Adresse email">
                 <p class="myp">Vous pouvez renouveler le sort de protection de votre compte en changeant de mot de
                     passe.</p>
-                <input class="case" type="password" name="password" placeholder="Mot de passe actuel"><br>
                 <input class="case" type="password" name="password" placeholder="Nouveau mot de passe">
                 <input class="case" type="password" name="confirm_password" placeholder="Confirmer nouveau mot de passe">
                 <div>
