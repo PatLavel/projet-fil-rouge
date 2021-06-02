@@ -16,8 +16,6 @@ htmlhead($title, $hrefStyle);
     htmlheader();
     ?>
 
-    <h1 class="myh1">Bienvenue à Nemelade!</h1>
-    <h2 class="myh2">Le Bureau Fédéral Magique a besoin de quelques informations pour valider votre inscription dans le Grand Registre des Citoyens. </h2>
 
     <div class="subscription">
         <!-- <div class="picture">
@@ -26,6 +24,9 @@ htmlhead($title, $hrefStyle);
         </div> -->
 
         <div class="subscription_form">
+            <h1 class="myh1">Bienvenue à Nemelade!</h1>
+            <h2 class="myh2">Le Bureau Fédéral Magique a besoin de quelques informations pour valider votre inscription dans le Grand Registre des Citoyens. </h2>
+
             <form action="script_ajout_compte.php" method="POST">
 
                 <p class="myp">Entrez votre nom et votre prénom. Ils ne seront pas visibles sur Nemelade. *</p>
