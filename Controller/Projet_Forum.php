@@ -82,8 +82,6 @@ htmlhead($title, $hrefStyle);
                             <?php
                             $data = (new TopicService())->displayTopic();
                             $dateCounterReponse = (new ReponseService())->counterReponse();
-                            $counterReponse = 0;
-                            $lastActivities = "Aucune";
 
                             foreach ($data as $value) {
                                 $_SESSION['id'] = $value->getIdTopic();
@@ -104,9 +102,6 @@ htmlhead($title, $hrefStyle);
                                                 echo $counterReponse;
                                             }
                                         }
-                                        if ($counterReponse == 0) {
-                                            echo $counterReponse;
-                                        }
                                         ?>
                                     </td>
                                     <td class="forum_vues">1506</td>
@@ -119,9 +114,6 @@ htmlhead($title, $hrefStyle);
                                                 $lastActivities = $value->getDateAjout();
                                                 echo $lastActivities;
                                             }
-                                        }
-                                        if ($lastActivities == 0) {
-                                            echo $lastActivities;
                                         }
                                         ?>
                                     </td>
