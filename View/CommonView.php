@@ -58,7 +58,7 @@ function htmlheader(): void
 
 function htmlfooter(): void
 {
-    //phpinfo();
+    phpinfo();
 ?>
     <footer>
         <div class="footer">
