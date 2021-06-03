@@ -42,8 +42,8 @@ function htmlheader(): void
                 ?>
                     <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
                     <div class="h_right2">
-                        <div class="lien_insc"><?php echo $_SESSION['user_login']; ?></div>
-                        <a href="../Controller/script_deconnexion.php" class="lien_insc">Deconnection</a>
+                        <a href="../Controller/modification_compte.php" class="lien_insc"><?php echo $_SESSION['user_login']; ?></a>
+                        <a href="../Controller/script_deconnexion.php" class="lien_insc">Deconnexion</a>
                     </div>
 
                 <?php     }    ?>
@@ -79,9 +79,9 @@ function htmlfooter(): void
             </div>
             <div class="right">
                 <a target="_blank" href="https://twitter.com/Kaamelott_tweet"><img class="logo_social" title="logo_twitter" src="../Style/logo_twitter.PNG" alt="logo_twitter" /></a>
-                <a target="_blank"  href="https://fr-fr.facebook.com/LesMurmuresDuDonjon"><img class="logo_social" title="logo_facebook" src="../Style/logo_facebook.PNG" alt="logo_facebook" /></a>
-                <a target="_blank"  href="https://discord.gg/yVmCy5js"><img class="logo_social" title="logo_discord" src="../Style/logo_discord.PNG" alt="logo_discord" /></a>
-                <a target="_blank"  href="https://warhammerfantasy.fandom.com/wiki/Warhammer_Wiki"><img class="logo_social" title="logo_whatsapp" src="../Style/logo_whatsapp.PNG" alt="logo_whatsapp" /></a>
+                <a target="_blank" href="https://fr-fr.facebook.com/LesMurmuresDuDonjon"><img class="logo_social" title="logo_facebook" src="../Style/logo_facebook.PNG" alt="logo_facebook" /></a>
+                <a target="_blank" href="https://discord.gg/yVmCy5js"><img class="logo_social" title="logo_discord" src="../Style/logo_discord.PNG" alt="logo_discord" /></a>
+                <a target="_blank" href="https://warhammerfantasy.fandom.com/wiki/Warhammer_Wiki"><img class="logo_social" title="logo_whatsapp" src="../Style/logo_whatsapp.PNG" alt="logo_whatsapp" /></a>
             </div>
         </div>
     </footer>
