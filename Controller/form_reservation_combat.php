@@ -28,23 +28,27 @@ htmlhead($title, $hrefStyle);
 
     ?>
 
-    <h1 class="myh1">Envie d'un peu d'action?</h1>
-    <h2 class="myh2">Assistez à un des combats de l'arène!</h2>
 
     <?php
     $userMoney = new UtilisateurService();
-
     $result = $userMoney->SelectArgent($_SESSION['user_login']);
+
+    $EvenementServ = new EvenementService();
+    $dataevent = $EvenementServ->GetSingleEvent($_GET["id"]);
+
     ?>
 
     <div class="reservation">
         <div class="subscription">
             <div class="subscription_form">
+                <h1 class="myh1">Envie d'un peu d'action?</h1>
+                <h2 class="myh2">Réservez votre place pour le combat entre</h2>
+                <h2><?php echo $dataevent->getCombattant1() ?> et <?php echo $dataevent->getCombattant2() ?>!!</h2></br>
                 <p class="myp">Vous disposez actuellement de <?php echo round($result) ?> PO.</p>
                 <p class="myp">Êtes vous certain de vouloir dépenser 10 PO pour assister à ce match?</p>
                 <div class="validation">
                 </div>
-                <form><button formaction="arene.php" class="button">Je réserve ma place!</button></form>
+                <form><button formaction="script_reservation.php" class="button">Je réserve ma place!</button></form>
 
             </div>
         </div>

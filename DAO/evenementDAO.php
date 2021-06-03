@@ -40,4 +40,14 @@ class EvenementDAO extends CommonDAO
     public function GetPastEvents()
     {
     }
+
+    public function addReservation($idCombat, $idUser)
+    {
+
+        $mysqli = new mysqli('127.0.0.1', 'root', '', 'nemelade');
+        $stmt = $mysqli->prepare("INSERT INTO reservation (id, numero, date, nombrePlace, counterPlace, id_utilisateur, id_evenement) SELECT MAX(id)+1, MAX(numero)+1, sysdate(), 1, MAX(counterPlace)+1, ?, ? FROM reservation;");
+        $stmt->bind_param("ii", $idUser, $idCombat);
+        $stmt->execute();
+        $mysqli->close();
+    }
 }
