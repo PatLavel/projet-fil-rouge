@@ -39,16 +39,24 @@ htmlhead($title, $hrefStyle);
                                         <option value="5">Les + populaires</option>
                                     </select>
                                 </div>
-                                <div class="col-lg-4 button_creer_suj">
-                                    <a class="button_creer_suj" href="Projet_Creation_Sujet.php">
-                                        <button class="btn btn-outline-dark" style="margin-top: 0px;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
-                                            </svg>
-                                            Créer un sujet
-                                        </button>
-                                    </a>
-                                </div>
+
+                                <?php
+                                if (isset($_SESSION["user_login"])) {
+                                ?>
+                                    <div class="col-lg-4 button_creer_suj">
+                                        <a class="button_creer_suj" href="Projet_Creation_Sujet.php">
+                                            <button class="btn btn-outline-dark" style="margin-top: 0px;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                                                </svg>
+                                                Créer un sujet
+                                            </button>
+                                        </a>
+                                    </div>
+                                <?php
+                                }
+                                ?>
+                                
                                 <div class="col-lg-4 search">
                                     <form class="d-flex search">
                                         <input class="form-control me-2" id="searchInput" type="search" placeholder="Recherche..." aria-label="Search">
@@ -84,7 +92,7 @@ htmlhead($title, $hrefStyle);
                             $dateCounterReponse = (new ReponseService())->counterReponse();
 
                             foreach ($data as $value) {
-                                $_SESSION['id'] = $value->getIdTopic();
+                                // $_SESSION['id'] = $value->getIdTopic();
                                 $id = $value->getIdTopic();
                             ?>
                                 <tr>
