@@ -262,6 +262,7 @@ body {
     background: rgba(103, 148, 83, 0.8);
     padding: 10px;
     padding-bottom: 1px;
+    margin-bottom: 100px;
     width: 100%;
 }
 
@@ -371,6 +372,7 @@ tr {
     position: sticky;
     top: 90%;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 .button_top:hover {
@@ -431,7 +433,8 @@ tr {
     background-color: rgba(103, 148, 83, 0.8);
     position: relative;
     top: 0px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
     border-bottom-left-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
 }
@@ -492,24 +495,15 @@ hr {
 }
 
 .sujet_rep {
-    <<<<<<< HEAD padding: 50px;
-}
-
-.sujet_rep_rep {
     margin: 50px 0 0 10rem;
     padding: 10px 50px 10px 50px;
     border-left: 2px solid #0000008e;
-    =======margin: 50px 0 0 10rem;
-    padding: 10px 50px 10px 50px;
-    border-left: 2px solid #0000008e;
-    /* padding: 50px; */
 }
 
 .sujet_rep_rep {
     margin: 50px 0 0 20rem;
     padding: 10px 50px 10px 50px;
     border-left: 2px solid #0000008e;
-    >>>>>>>f380724 (modif style forum)
 }
 
 .footer_suj {
@@ -531,7 +525,12 @@ hr {
     border: 1px solid #ced4da;
 }
 
-.button_footer_suj {
+.button_footer_suj_jaime {
+    border: none;
+    background: none;
+}
+
+.button_footer_suj_jaimepas {
     border: none;
     background: none;
 }
