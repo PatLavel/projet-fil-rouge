@@ -18,10 +18,10 @@ function displayActu()
     <div class="container-grille">
       <header>
         <div class="h_left">
-          <a href=""><img class="logo_nemelade" src="../Style/logo_blanc.png" alt="logo_nemelade" /></a>
+          <a href="../Controller/accueil.php"><img class="logo_nemelade" src="../Style/logo_blanc.png" alt="logo_nemelade" /></a>
         </div>
         <div class="h_middle">
-          <a href="" class="HeadText">Accueil</a>
+          <a href="../Controller/accueil.php" class="HeadText">Accueil</a>
           <a href="../Controller/Projet_Forum.php" class="HeadText">Forum</a>
           <a href="../Controller/Zomvid.php" class="HeadText">Actualités</a>
           <a href="../Controller/arene.php" class="HeadText">Arène</a>
@@ -79,7 +79,7 @@ function displayActu()
       </div>
       <footer>
         <div class="left">
-          <img class="logo_footer" title="logo_blanc" src="../Style/logo_blanc.PNG" alt="logo_nemelade" />
+          <a href="../Controller/accueil.php"><img class="logo_footer" title="logo_blanc" src="../Style/logo_blanc.PNG" alt="logo_nemelade" />
         </div>
         <div class="middle">
           <div>
