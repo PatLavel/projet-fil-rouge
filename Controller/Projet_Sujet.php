@@ -63,7 +63,7 @@ htmlhead($title, $hrefStyle);
             </div>
 
             <div class="col-lg-8">
-                <div class="rounded block_suj">
+                <div class="block_suj">
                     <div class="block_sujet">
                         <div class="rounded bar_title_suj">
                             <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
@@ -122,7 +122,7 @@ htmlhead($title, $hrefStyle);
                         </div>
                     </div>
                 </div>
-                <div class="rounded block_rep">
+                <div class="block_rep">
                     <div class="bar_info_rep">
                         <div class="nb_rep">
                             <?php if (isset($messageError)) { ?>
