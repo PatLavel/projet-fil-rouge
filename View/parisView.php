@@ -68,7 +68,7 @@ function displaywin()
 
     <?php
     $title = "Parier";
-    $hrefStyle = "../Style/Projet_Forum.css";
+    $hrefStyle = "../Style/style.css";
     htmlhead($title, $hrefStyle);
     ?>
 
@@ -98,7 +98,7 @@ function displayloss()
 
     <?php
     $title = "Parier";
-    $hrefStyle = "../Style/Projet_Forum.css";
+    $hrefStyle = "../Style/style.css";
     htmlhead($title, $hrefStyle);
     ?>
 

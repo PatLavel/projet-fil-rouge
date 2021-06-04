@@ -60,7 +60,7 @@ function htmlfooter(): void
 {
     //phpinfo();
 ?>
-    <footer>
+    <footer class="footer">
         <div class="footer">
             <div class="left">
                 <a href="../Controller/accueil.php"><img class="logo_footer" title="logo_blanc" src="../Style/logo_blanc.PNG" alt="logo_nemelade" /> </a>
