@@ -24,17 +24,32 @@ htmlhead($title, $hrefStyle);
     <?php
     htmlheader();
 
-    $userMoney = new UtilisateurService();
+    $array = isReservation($_SESSION['user_login']);
+    foreach ($array as $dataUser) {
+    }
 
+    $userMoney = new UtilisateurService();
     $result = $userMoney->SelectArgent($_SESSION['user_login']);
+
     ?>
 
     <div class="subscription">
         <div class="subscription_form">
             <div>
-                <h1 class="myh1">Bienvenue chez vous.</h1>
-                <p class="myp">Votre solde est de <?php echo round($result) ?> PO.
-                <p></br>
+                <h1 class="myh1">Bienvenue chez vous, <?php echo $_SESSION['user_login'] ?>.</h1>
+                <p class="myp">Votre solde est de <?php echo round($result) ?> PO.</p>
+                <?php
+                if ($dataUser['id_evenement'] == NULL) {
+                    echo "<p class='myp'>Vous n'avez aucune réservation pour un combat.</p>";
+                } else {
+                    $EvenementServ = new EvenementService();
+                    $dataevent = $EvenementServ->GetSingleEvent($dataUser['id_evenement']);
+                    echo "<p class='myp'>Le prochain combat auquel vous allez assister : " . $dataevent->getCombattant1() . " VS " . $dataevent->getCombattant2() . "!!</p>";
+                    echo "<p class='myp'>Ce combat se déroulera le : " . $dataevent->getDateDebut() . "</p>";
+                }
+                ?>
+                </br>
+
                 <h2 class="myh2">Vous pouvez modifier vos informations personnelles. </h2>
             </div>
             <form method="POST">
@@ -56,13 +71,22 @@ htmlhead($title, $hrefStyle);
     </div>
 
 
-<<<<<<< HEAD
-=======
-    <div class="bottom"></div>
->>>>>>> 8c7d9fd (divers)
 
     <?php
     htmlfooter();
+
+    function isReservation($login)
+    {
+        $mysqli = new mysqli('127.0.0.1', 'root', '', 'nemelade');
+        $stmt = $mysqli->prepare('SELECT login, id_evenement FROM utilisateur WHERE login=?;');
+        $stmt->bind_param("s", $login);
+        $stmt->execute();
+        $rs = $stmt->get_result();
+        $tab = $rs->fetch_all(MYSQLI_ASSOC);
+        $rs->free();
+        $mysqli->close();
+        return $tab;
+    }
     ?>
 
 </body>

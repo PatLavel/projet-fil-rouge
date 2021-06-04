@@ -35,7 +35,7 @@ htmlhead($title, $hrefStyle);
 
     $EvenementServ = new EvenementService();
     $dataevent = $EvenementServ->GetSingleEvent($_GET["id"]);
-
+    $id = $dataevent->getId();
     ?>
 
     <div class="reservation">
@@ -48,7 +48,8 @@ htmlhead($title, $hrefStyle);
                 <p class="myp">Êtes vous certain de vouloir dépenser 10 PO pour assister à ce match?</p>
                 <div class="validation">
                 </div>
-                <form><button formaction="script_reservation.php" class="button">Je réserve ma place!</button></form>
+                <?php echo "<a class='button' href='script_reservation.php?id=$id'>Je réserve ma place!</a>"; ?>
+
 
             </div>
         </div>
