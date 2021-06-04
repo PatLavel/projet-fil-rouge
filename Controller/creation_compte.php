@@ -46,7 +46,7 @@ htmlhead($title, $hrefStyle);
 
                 <div class="validation">
                     <span>
-                        <input type="checkbox" id="cgu" name="cgu">
+                        <input type="checkbox" required id="cgu" name="cgu">
                         <label class="check" for="cgu">J'ai lu et j'accepte les conditions générales d'utilisation</label>
                     </span>
                     <span>

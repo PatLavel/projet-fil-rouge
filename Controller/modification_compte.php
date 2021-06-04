@@ -24,19 +24,21 @@ htmlhead($title, $hrefStyle);
     <?php
     htmlheader();
 
-    $array = isReservation($_SESSION['user_login']);
+    $userlogin = $_SESSION['user_login'];
+
+    $array = updatablesData($_SESSION['user_login']);
     foreach ($array as $dataUser) {
     }
 
     $userMoney = new UtilisateurService();
-    $result = $userMoney->SelectArgent($_SESSION['user_login']);
+    $result = $userMoney->SelectArgent($userlogin);
 
     ?>
 
     <div class="subscription">
         <div class="subscription_form">
             <div>
-                <h1 class="myh1">Bienvenue chez vous, <?php echo $_SESSION['user_login'] ?>.</h1>
+                <h1 class="myh1">Bienvenue chez vous, <?php echo $userlogin ?>.</h1>
                 <p class="myp">Votre solde est de <?php echo round($result) ?> PO.</p>
                 <?php
                 if ($dataUser['id_evenement'] == NULL) {
@@ -54,17 +56,19 @@ htmlhead($title, $hrefStyle);
             </div>
             <form method="POST">
                 <p class="myp">Modifiez votre adresse email.</p>
-                <input class="case" type="email" name="confirm_email" placeholder="Adresse email">
+                <input class="case" type="email" name="confirm_email" value="<?php echo $dataUser['mail'] ?>">
                 <p class="myp">Vous pouvez renouveler le sort de protection de votre compte en changeant de mot de
                     passe.</p>
-                <input class="case" type="password" name="password" placeholder="Nouveau mot de passe">
-                <input class="case" type="password" name="confirm_password" placeholder="Confirmer nouveau mot de passe">
+                <input class="case" type="password" name="password" value="<?php echo $dataUser['password'] ?>">
+                <input class="case" type="password" name="confirm_password" value="<?php echo $dataUser['password'] ?>">
                 <div>
                     <input type="checkbox" id="newsletter" name="newsletter">
                     <label for="newsletter">Je veux recevoir la Gazette de Nemelade par email</label>
                 </div>
                 <div>
-                    <input type="submit" class="button" value="Enregistrer">
+                    <button formaction="script_modif_compte.php?id=" class="button">Enregistrer</button>
+                    <?php echo "<button class='button' formaction='script_modif_compte.php?id=$userlogin'>Enregistrer</button>"; ?>
+
                 </div>
             </form>
         </div>
@@ -75,10 +79,10 @@ htmlhead($title, $hrefStyle);
     <?php
     htmlfooter();
 
-    function isReservation($login)
+    function updatablesData($login)
     {
         $mysqli = new mysqli('127.0.0.1', 'root', '', 'nemelade');
-        $stmt = $mysqli->prepare('SELECT login, id_evenement FROM utilisateur WHERE login=?;');
+        $stmt = $mysqli->prepare('SELECT login, password, mail, id_evenement FROM utilisateur WHERE login=?;');
         $stmt->bind_param("s", $login);
         $stmt->execute();
         $rs = $stmt->get_result();
@@ -87,6 +91,9 @@ htmlhead($title, $hrefStyle);
         $mysqli->close();
         return $tab;
     }
+
+
+
     ?>
 
 </body>
