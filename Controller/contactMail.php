@@ -7,7 +7,7 @@ if (isset($_POST['Mail'])) {
     $email = $_POST['Mail'];
     $guilde =$_POST['Guilde'];
     $Sujet = $_POST['Sujet'];
-    $message = "De:".$_POST['Mail']." ".$_POST['Nom'] ." ". $_POST['Prenom']." de la guilde".$guilde." a envoyer:".$_POST['msg'];
+    $message = "De:".$_POST['Mail']." ".$_POST['Nom'] ." ". $_POST['Prenom']." de la guilde des ".$guilde." a envoyer:".$_POST['msg'];
     $header = "From:".$_POST['Mail'];
    
     

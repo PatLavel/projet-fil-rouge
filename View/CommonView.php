@@ -26,7 +26,7 @@ function htmlheader(): void
             <div class="h_middle">
                 <a href="../Controller/accueil.php" class="HeadText">Accueil</a>
                 <a href="../Controller/Projet_Forum.php" class="HeadText">Forum</a>
-                <a href="../Controller/Zomvid.php" class="HeadText">Actualités</a>
+                <a href="../Controller/actu.php" class="HeadText">Actualités</a>
                 <a href="../Controller/arene.php" class="HeadText">Arène</a>
             </div>
             <div class="h_right1">
