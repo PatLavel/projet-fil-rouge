@@ -17,20 +17,21 @@ session_start();
 <body>
     <?php
 
-    // if (!isset($_SESSION['email'])) {
-    //     header('Location:Connexion.php');
-    // } else {
-    //     header('Location:Modification_compte.php');
-    // }
-    $hash = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
+    if (!isset($_SESSION['email'])) {
+        header('Location:Connexion.php');
+    } else {
+        header('Location:Modification_compte.php');
+    }
 
-    Ajout_utilisateur($_POST['mail'], $_POST['user_password'], $hash, $_GET['id']);
+    $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    function Ajout_utilisateur($mail, $password, $hash, $login)
+    updateUser($_POST['email'], $_POST['password'], $hash, $_POST['id']);
+
+    function updateUser($mail, $password, $hash, $id)
     {
         $mysqli = new mysqli('127.0.0.1', 'root', '', 'nemelade');
         $stmt = $mysqli->prepare("UPDATE utilisateur SET mail = ?, password = ?, hash= ? WHERE id=?;");
-        $stmt->bind_param("sssi", $mail, $password, $hash, $login);
+        $stmt->bind_param("sssi", $mail, $password, $hash, $id);
         $stmt->execute();
         $mysqli->close();
     }

@@ -55,8 +55,9 @@ htmlhead($title, $hrefStyle);
                 <h2 class="myh2">Vous pouvez modifier vos informations personnelles. </h2>
             </div>
             <form method="POST">
+                <input class="case" type="hidden" name="id" value="<?php echo $dataUser['id'] ?>">
                 <p class="myp">Modifiez votre adresse email.</p>
-                <input class="case" type="email" name="confirm_email" value="<?php echo $dataUser['mail'] ?>">
+                <input class="case" type="email" name="email" value="<?php echo $dataUser['mail'] ?>">
                 <p class="myp">Vous pouvez renouveler le sort de protection de votre compte en changeant de mot de
                     passe.</p>
                 <input class="case" type="password" name="password" value="<?php echo $dataUser['password'] ?>">
@@ -66,7 +67,6 @@ htmlhead($title, $hrefStyle);
                     <label for="newsletter">Je veux recevoir la Gazette de Nemelade par email</label>
                 </div>
                 <div>
-                    <button formaction="script_modif_compte.php?id=" class="button">Enregistrer</button>
                     <?php echo "<button class='button' formaction='script_modif_compte.php?id=$userlogin'>Enregistrer</button>"; ?>
 
                 </div>
@@ -82,7 +82,7 @@ htmlhead($title, $hrefStyle);
     function updatablesData($login)
     {
         $mysqli = new mysqli('127.0.0.1', 'root', '', 'nemelade');
-        $stmt = $mysqli->prepare('SELECT login, password, mail, id_evenement FROM utilisateur WHERE login=?;');
+        $stmt = $mysqli->prepare('SELECT id, login, password, mail, id_evenement FROM utilisateur WHERE login=?;');
         $stmt->bind_param("s", $login);
         $stmt->execute();
         $rs = $stmt->get_result();

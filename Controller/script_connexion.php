@@ -21,7 +21,7 @@
         if (password_verify($_POST['user_password'], $tab['hash'])) {
             session_start();
             $_SESSION['user_login'] = $_POST['user_login'];
-            header('Location:arene.php');
+            header('Location:accueil.php');
         } else {
             echo "<div class='status_connexion'>
                 <div><p>Informations invalides</p></div>

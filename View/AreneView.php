@@ -23,7 +23,7 @@ function displayArene($events)
 
         <div class="arena_content container myp">
 
-            <div><img class="arena" title="arena" src="/style/Arena.png" alt="image_arene" />
+            <div><img class="arena" title="arena" src="../style/Arena.png" alt="image_arene" />
                 <div>
                     <h1 class="myh1">Bienvenue dans l'Arène!</h1>
                 </div>
