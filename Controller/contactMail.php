@@ -30,18 +30,3 @@ else {
 }
 
 ?>
-
-<?php 
-// $to_email = 'p.lavelle@numericable.fr';
-// $subject = 'Testing PHP Mail';
-// $message = 'This mail is sent using the PHP mail ';
-// $headers = 'From: bob';
-//   //send email 
-  
-//     if (mail($to_email, $subject, $message, $headers)) {
-//         echo "yes";
-//     } else {
-//         echo "no";
-//     } 
-
-?>
