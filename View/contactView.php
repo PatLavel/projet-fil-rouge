@@ -18,9 +18,15 @@ function displayContact()
 
     <body>
 
-
         <div class="row">
             <div class="container  col-md-6 offset-md-2">
+                <?php
+                if ($_GET['msg'] = 'sent') {
+                    echo ("<h4 class='map'>Message envoyé, merci pour votre intérêt</h4>");
+                } else if ($_GET['msg'] = 'error') {
+                    echo ("<h4 >Message non envoye, merci de réessayer plus tard</h4>");
+                }
+                ?>
                 <h2 class="text-center map">Nous contacter:</h2>
                 <form action="contactMail.php" method="POST">
                     <div class="container">

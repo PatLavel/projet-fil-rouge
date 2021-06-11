@@ -3,8 +3,6 @@ include_once(__DIR__ . "/../view/CommonView.php");
 
 function displayParis($event, $datauser)
 {
-
-
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -18,12 +16,7 @@ function displayParis($event, $datauser)
     <body>
         <?php
         htmlheader();
-
-
-
         if ($datauser > 0) {
-            
-
         ?>
             <div class="container-fluid container col-md-8 myp">
                 <h2 class="versus"><?php echo $event->getLibelle(); ?></h2>

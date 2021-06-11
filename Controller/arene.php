@@ -8,7 +8,6 @@ $EvenementServ = new EvenementService() ;
 
 $UserServ = new UtilisateurService() ;
 
-
 $dataevent = $EvenementServ->GetFutureEvents();
 
 $datauser = 5;// $UserServ->getSup();

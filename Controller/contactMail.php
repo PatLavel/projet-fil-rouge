@@ -18,9 +18,13 @@ if (isset($_POST['Mail'])) {
     //     echo "no";
     // } 
     if (mail($admin_email, $Sujet, $message,$header )) {
+        //echo "<a class='button' href='contact.php?id=$idMatch'>Réserver</a>";
+        header('Location:contact.php?msg=sent');
         echo "Email successfully sent to $admin_email...";
     } else {
-        echo "Email sending failed...";
+        header('Location:contact.php?msg=error');
+        // echo "<a class='button' href='contact.php?id=$idMatch'>Réserver</a>";
+         echo "Email sending failed...";
     }
     //Email response   , "From:" . $email
 }
@@ -28,5 +32,4 @@ if (isset($_POST['Mail'])) {
 else {
     header(__DIR__ . "/../Controller/contact.php");
 }
-
 ?>
