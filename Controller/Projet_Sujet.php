@@ -243,24 +243,6 @@ htmlhead($title, $hrefStyle);
                             }
                         }
                         ?>
-
-                        <!--<nav class="suj_nav" aria-label="Page navigation">
-                            <ul class="pagination justify-content-center pagination-sm">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>-->
                     </div>
                 </div>
             </div>
@@ -280,6 +262,7 @@ htmlhead($title, $hrefStyle);
     <?php htmlfooter(); ?>
 
     <script src="jquery-3.6.0.js"></script>
+    <script src="ForumTriReponse.js"></script>
     <script src="ForumScript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>

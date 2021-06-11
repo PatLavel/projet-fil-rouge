@@ -19,7 +19,7 @@ class TopicDAO extends CommonDAO
     public function displayTopic(): array
     {
         $bdd = $this->connexionDatabase();
-        $stmt = $bdd->prepare("SELECT id, titre, message, dateAjout, DATE_FORMAT(dateAjout, '%d/%m/%Y à %H:%i:%s') as dateAjout FROM topic;");
+        $stmt = $bdd->prepare("SELECT id, titre, message, DATE_FORMAT(dateAjout, '%d/%m/%Y à %H:%i:%s') as dateAjout FROM topic;");
         $stmt->execute();
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

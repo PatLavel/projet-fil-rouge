@@ -1,5 +1,5 @@
 <?php
-class Topic
+class Topic implements JsonSerializable
 {
     private $idTopic;
     private $titre;
@@ -8,6 +8,11 @@ class Topic
     private $jaime;
     private $jaimepas;
     private $id_utilisateur;
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
 
     /**
      * Get the value of idTopic

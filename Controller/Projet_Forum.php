@@ -31,7 +31,7 @@ htmlhead($title, $hrefStyle);
                         <div class="container-fluid">
                             <div class="rounded bar_nav">
                                 <div class="col-lg-4 tri">
-                                    <select class="form-select form-select-sm tri">
+                                    <select class="form-select form-select-sm tri" id="tri">
                                         <option value="1">Activités récentes</option>
                                         <option value="2">Sujets récents</option>
                                         <option value="3">Meilleurs notes</option>
@@ -95,7 +95,7 @@ htmlhead($title, $hrefStyle);
                                 // $_SESSION['id'] = $value->getIdTopic();
                                 $id = $value->getIdTopic();
                             ?>
-                                <tr>
+                                <tr class="truc">
                                     <td class="colonne_sujet">
                                         <span class="nom_sujet"><a class="lien_sujet" href="Projet_Sujet.php?id=<?php echo $id ?>"><?php echo $value->getTitre() ?></a></span>
                                         <br>
@@ -149,6 +149,7 @@ htmlhead($title, $hrefStyle);
 
     <script src="jquery-3.6.0.js"></script>
     <script src="ForumSearch.js"></script>
+    <script src="ForumTriSujet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 
