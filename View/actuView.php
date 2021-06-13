@@ -22,17 +22,29 @@ function displayActu()
                     <a href=""><img class="logo_nemelade" src="../Style/logo_blanc.png" alt="logo_nemelade" /></a>
                 </div>
                 <div class="h_middle">
-                    <a href="" class="HeadText">Accueil</a>
+                    <a href="../Controller/Accueil.php" class="HeadText">Accueil</a>
                     <a href="../Controller/Projet_Forum.php" class="HeadText">Forum</a>
-                    <a href="../Controller/Zomvid.php" class="HeadText">Actualités</a>
+                    <a href="../Controller/actu.php" class="HeadText">Actualités</a>
                     <a href="../Controller/arene.php" class="HeadText">Arène</a>
                 </div>
                 <div class="h_right1">
-                    <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
-                    <div class="h_right2">
-                        <a href="../Controller/Connexion.php" class="lien_co">Connexion</a>
-                        <a href="../Controller/creation_compte.php" class="lien_insc">Inscription</a>
-                    </div>
+                    <?php if (!isset($_SESSION['user_login'])) {    ?>
+                        <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
+                        <div class="h_right2">
+                            <a href="../Controller/Connexion.php" class="lien_co">Connexion</a>
+                            <a href="../Controller/creation_compte.php" class="lien_insc">Inscription</a>
+                        </div>
+
+                    <?php   } else {
+                        //var_dump($_SESSION); 
+                    ?>
+                        <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
+                        <div class="h_right2">
+                            <a href="../Controller/modification_compte.php" class="lien_insc"><?php echo $_SESSION['user_login']; ?></a>
+                            <a href="../Controller/script_deconnexion.php" class="lien_insc">Deconnexion</a>
+                        </div>
+
+                    <?php     }    ?>
                 </div>
             </header>
             <div class=carrousel1>
@@ -42,15 +54,15 @@ function displayActu()
                 <h1 class=titre>ACTUALITE MALADIE : </h1>
                 <div class="container">
                     <div class="box">
-                        <img src="https://source.unsplash.com/1000x800">
+                        <img src="../Style/zombie-warning-260nw-154781906.webp">
                         <span>Top actualité maladie #1</span>
                     </div>
                     <div class="box">
-                        <img src="https://source.unsplash.com/1000x802">
+                        <img src="../Style/New_1.jpg">
                         <span>Top actualité maladie #2</span>
                     </div>
                     <div class="box">
-                        <img src="https://source.unsplash.com/1000x804">
+                        <img src="../Style/zombie.jpg">
                         <span>Top actualité maladie #3</span>
                     </div>
                 </div>
@@ -62,19 +74,19 @@ function displayActu()
                 <h1 class=titre>ACTUALITE GENERALE : </h1>
                 <div class="container">
                     <div class="box">
-                        <img src="https://source.unsplash.com/1000x800">
+                        <img src="../Style/ville.jpg">
                         <span>Top actualité #1</span>
                     </div>
                     <div class="box">
-                        <img src="https://source.unsplash.com/1000x802">
+                        <img src="../Style/king.jpg">
                         <span>Top actualité #2</span>
                     </div>
                     <div class="box">
-                        <img src="https://source.unsplash.com/1000x804">
+                        <img src="../Style/Arena.png">
                         <span>Top actualité #3</span>
                     </div>
                     <div class="box">
-                        <img src="https://source.unsplash.com/1000x806">
+                        <img src="../Style/New_1.jpg">
                         <span>Top actualité #4</span>
                     </div>
                 </div>

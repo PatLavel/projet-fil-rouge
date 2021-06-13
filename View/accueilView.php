@@ -18,20 +18,32 @@ function displayActu()
     <div class="container-grille">
       <header>
         <div class="h_left">
-          <a href="../Controller/accueil.php"><img class="logo_nemelade" src="../Style/logo_blanc.png" alt="logo_nemelade" /></a>
+          <a href=""><img class="logo_nemelade" src="../Style/logo_blanc.png" alt="logo_nemelade" /></a>
         </div>
         <div class="h_middle">
-          <a href="../Controller/accueil.php" class="HeadText">Accueil</a>
+          <a href="../Controller/Accueil.php" class="HeadText">Accueil</a>
           <a href="../Controller/Projet_Forum.php" class="HeadText">Forum</a>
-          <a href="../Controller/Zomvid.php" class="HeadText">Actualités</a>
+          <a href="../Controller/actu.php" class="HeadText">Actualités</a>
           <a href="../Controller/arene.php" class="HeadText">Arène</a>
         </div>
         <div class="h_right1">
-          <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
-          <div class="h_right2">
-            <a href="../Controller/Connexion.php" class="lien_co">Connexion</a>
-            <a href="../Controller/creation_compte.php" class="lien_insc">Inscription</a>
-          </div>
+          <?php if (!isset($_SESSION['user_login'])) {    ?>
+            <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
+            <div class="h_right2">
+              <a href="../Controller/Connexion.php" class="lien_co">Connexion</a>
+              <a href="../Controller/creation_compte.php" class="lien_insc">Inscription</a>
+            </div>
+
+          <?php   } else {
+            //var_dump($_SESSION); 
+          ?>
+            <a href="modification_compte.php"><img class="logo_user" title="logo_blanc" src="../Style/user_pic.png" alt="logo_nemelade" /></a>
+            <div class="h_right2">
+              <a href="../Controller/modification_compte.php" class="lien_insc"><?php echo $_SESSION['user_login']; ?></a>
+              <a href="../Controller/script_deconnexion.php" class="lien_insc">Deconnexion</a>
+            </div>
+
+          <?php     }    ?>
         </div>
       </header>
 
@@ -42,20 +54,20 @@ function displayActu()
         <h1 class=titre> TOP ACTUALITES : </h1>
         <div class="container">
           <div class="box">
-            <img src="https://source.unsplash.com/1000x800">
-            <span>Top actualité #1</span>
+            <img src="../Style/New_1.jpg">
+            <span>ALERTE ZOMVID</span>
           </div>
           <div class="box">
-            <img src="https://source.unsplash.com/1000x802">
-            <span>Top actualité #2</span>
+            <img src="../Style/king.jpg">
+            <span>Elections Nemelade</span>
           </div>
           <div class="box">
-            <img src="https://source.unsplash.com/1000x804">
-            <span>Top actualité #3</span>
+            <img src="../Style/illustration_ville.jpg">
+            <span>La ville prospère</span>
           </div>
           <div class="box">
-            <img src="https://source.unsplash.com/1000x806">
-            <span>Top actualité #4</span>
+            <img src="../Style/clerc.webp">
+            <span>Contactez-nous!</span>
           </div>
         </div>
 
@@ -67,12 +79,12 @@ function displayActu()
         <h1 class=titre> PROCHAINS COMBATS : </h1>
         <div class="container">
           <div class="box">
-            <img src="https://source.unsplash.com/1000x800">
-            <span>Combat Arène #1</span>
+            <img src="../Style/vs1.png">
+            <span>STARATEGOS vs WEREWOLF</span>
           </div>
           <div class="box">
-            <img src="https://source.unsplash.com/1000x802">
-            <span>Combat Arène #2</span>
+            <img src="../Style/vs2.png">
+            <span>GORILLA vs DEATHBRINGER</span>
           </div>
         </div>
 
