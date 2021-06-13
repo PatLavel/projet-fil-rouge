@@ -60,8 +60,8 @@ function htmlfooter(): void
 {
     //phpinfo();
 ?>
-    <footer class="container_footer">
-        <div class="footer">
+
+    <footer class=" footer">
             <div class="left">
                 <a href="../Controller/accueil.php"><img class="logo_footer" title="logo_blanc" src="../Style/logo_blanc.PNG" alt="logo_nemelade" /> </a>
             </div>
@@ -83,7 +83,6 @@ function htmlfooter(): void
                 <a target="_blank" href="https://discord.gg/yVmCy5js"><img class="logo_social" title="logo_discord" src="../Style/logo_discord.PNG" alt="logo_discord" /></a>
                 <a target="_blank" href="https://warhammerfantasy.fandom.com/wiki/Warhammer_Wiki"><img class="logo_social" title="logo_whatsapp" src="../Style/logo_whatsapp.PNG" alt="logo_whatsapp" /></a>
             </div>
-        </div>
     </footer>
 
 
