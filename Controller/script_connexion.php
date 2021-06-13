@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
-    <meta charset="utf-8" />
-    <title>Nemelade : inscription</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="projet-fil-rouge\Style\style.css" />
-
-</head>
-
-<body>
     <?php
+    include_once(__DIR__ . "/../DAO/connexionDAO.php");
 
     $login = $_POST['user_login'];
-    // $employeDAO = new EmployeDAO();
     $tab = connexion($login);
 
     for ($i = 0; $i < count($tab); $i++) {
@@ -29,21 +16,3 @@
                 </div>";
         }
     }
-
-    function connexion($login)
-    {
-        $mysqli = new mysqli('127.0.0.1', 'root', '', 'nemelade');
-        $stmt = $mysqli->prepare("SELECT hash FROM utilisateur WHERE login=?;");
-        $stmt->bind_param("s", $login);
-        $stmt->execute();
-        $rs = $stmt->get_result();
-        $tab = $rs->fetch_array(MYSQLI_ASSOC);
-        $rs->free();
-        $mysqli->close();
-        return $tab;
-    }
-
-    ?>
-</body>
-
-</html>
